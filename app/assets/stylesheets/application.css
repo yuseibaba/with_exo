@@ -13,3 +13,310 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  min-width: 720px;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+ a {
+  text-decoration: none;
+  color: #333;
+}
+
+/*header*/
+ header {
+   z-index: 3;
+   width: 100%;
+   position: fixed;
+   height: 100px;
+   background-color: rgba(0, 0, 0, .8);
+ }
+ 
+ 
+/*ヘッダーロゴのレイアウト*/
+.logo {
+  width: 18%;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo img {
+  width: 100%;
+}
+ 
+/*header-top*/
+.header-top-wrapper {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*ログイン後に表示されるグローバルナビゲーション*/
+.global-navi-top {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.global-navi-top ul {
+  list-style: none;
+  margin: 0;
+}
+
+.global-navi-top ul li {
+  display: inline-block;
+  border-right: 1px solid #ffffff;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.global-navi-top ul li a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.global-navi-top ul li a {
+  color: #ffffff;
+}
+
+/*nav-topメニューをマウスオーバーした際の下線*/
+.global-navi-top ul li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #ffffff;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+
+.global-navi-top ul li a:hover::after {
+  transform: scale(1, 1);
+}
+
+/*投稿作成ボタン*/
+.top-post {
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.top-post a {
+  display: block;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  transition: all .2s ease;
+}
+
+.top-post a:hover {
+  color: #000000;
+  background-color: #f5f5f5;
+  transition: all .2s ease;
+}
+
+/*header-bottom*/
+
+.header-bottom-wrapper {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*ログインしていない際に表示されるログインおよび新規登録ボタン*/
+.login-btn {
+  width: 20%;
+}
+
+.btn {
+  border-radius: 90px;
+  margin-right: 5px;
+}
+
+/*ログイン後に表示されるグローバルナビゲーション*/
+.global-navi-bottom {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.global-navi-bottom ul {
+  list-style: none;
+  margin: 0;
+}
+
+.global-navi-bottom ul li {
+  display: inline-block;
+  border-right: 1px solid #000000;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.global-navi-bottom ul li a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.global-navi-bottom ul li a {
+  color: #333;
+}
+
+/*navメニューをマウスオーバーした際の下線*/
+.global-navi-bottom ul li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+
+.global-navi-bottom ul li a:hover::after {
+  transform: scale(1, 1);
+}
+
+
+/*投稿作成ボタン*/
+.bottom-post {
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.bottom-post a {
+  display: block;
+  padding: 5px;
+  border-radius: 10px;
+  transition: all .2s ease;
+}
+
+.bottom-post a:hover {
+  color: #f5f5f5;
+  background-color: #696969;
+  transition: all .2s ease;
+}
+
+.far span {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+/*footerメニュー*/
+ footer {
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+ footer .footer-navi {
+   padding: 30px 0;
+ }
+
+ footer .footer-navi img {
+   width:180px;
+   height: 40px;
+   padding: 0;
+   margin-bottom: 20px;
+ }
+
+ footer ul {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+ footer ul li {
+  display: inline-block;
+  border-right: 1px solid #000000;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+ footer ul li a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+ footer ul li a {
+  color: #333;
+}
+
+/*footerメニューをマウスオーバーした際の下線*/
+ footer ul li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+
+ footer ul li a:hover::after {
+  transform: scale(1, 1);
+}
+
+footer small {
+    display: block;
+    padding: 8px 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/*header レスポンシブデザイン*/
+@media(max-width:1200px){
+  
+  .logo {
+    width: 25%;
+  }
+  
+  .login-btn{
+    width: 28%;
+  }
+  
+  .wrap-video img {
+    display: block;
+    position: relative;
+    width: 100%;
+  　z-index: -100;
+  }
+  
+  .wrap-video video {
+    display: none;
+  }
+}
+
+@media(max-width:670px){
+  
+  .logo {
+    width: 40%;
+  }
+  
+  .login-btn {
+    width: 54%;
+  }
+}
+
+
