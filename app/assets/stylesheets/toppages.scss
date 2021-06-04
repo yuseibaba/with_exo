@@ -1,0 +1,170 @@
+// Place all the styles related to the toppages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*ヘッダー下のビデオ*/
+.wrap-video{
+  position: relative;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.wrap-video video{
+  position: relative;
+  width: 100%;
+  z-index: -100;
+  transform: skewY(-4deg);
+  transform-origin: top left;
+}
+
+.wrap-video img {
+  display: none;
+}
+
+/*video上にある新規登録ページとサイト紹介ページへのリンク*/
+.text {
+ position: absolute;
+ top: 65%;
+ left: 45%;
+ z-index: 2;
+ text-align: center;
+}
+
+.sign-up {
+  display: block;
+  padding: 10px;
+  background-color: rgba(224, 224, 224, 0.9);
+  color: #000000;
+  margin-bottom: 10px;
+  transition: all .3s ease;
+}
+
+.sign-up:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.about a {
+  display: inline-block;
+  position: relative;
+  text-decoration: underline;
+  color: #ffffff;
+  padding: 3px;
+}
+
+.about a:hover {
+  color: #e8e8e8;
+}
+
+.wrapper h1 {
+  text-align: center;
+}
+
+/*ここからaboutページ*/
+/*見出し*/
+.contents {
+  padding: 400px 0;
+  text-align: center;
+  background-image: url(/about/background_img1.png);
+}
+
+.contents h2 {
+  margin-bottom: 50px;
+}
+
+.contents p {
+  line-height: 30px;
+}
+
+/*当アプリの紹介文*/
+.introduction {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  background-image: url(/about/background_img2.png);
+}
+
+.about_image {
+  width: 50%;
+  position: relative;
+}
+
+.main_image {
+  width: 55%;
+}
+
+.sub_image {
+  position: absolute;
+  top: 75%;
+  left: 60%;
+  width: 35%;
+}
+
+.introduction_sentence {
+  width: 50%;
+}
+
+.introduction_sentence p {
+  text-align: left;
+  display: inline-block;
+}
+
+/*自己紹介*/
+.manager_introduction {
+  padding: 400px 100px;
+  padding-bottom: 100px;
+  background-image: url(/about/background_img3.png);
+}
+
+.manager_introduction h2 {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.my_introduction_sentence {
+  display: flex;
+  width: 100%;
+}
+
+.my_introduction_sentence table {
+  width: 60%;
+  border-collapse: separate;
+  border-spacing: 20px 20px;
+}
+
+.my_introduction_sentence table th {
+  text-align: left;
+  vertical-align: top;
+}
+
+.my_introduction_sentence table td {
+  text-align: left;
+  vertical-align: top;
+}
+
+.my_introduction_sentence .my_image {
+  width: 40%;
+  border-radius: 50%;
+}
+
+@media(max-width:1200px){
+  
+  .my_introduction_sentence {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .my_introduction_sentence table {
+    width: 100%;
+  }
+  
+  .my_introduction_sentence image {
+    width: 100%;
+  }
+}
