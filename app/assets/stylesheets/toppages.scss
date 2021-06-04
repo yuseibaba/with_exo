@@ -31,7 +31,7 @@ body {
  position: absolute;
  top: 65%;
  left: 45%;
- z-index: 3;
+ z-index: 2;
  text-align: center;
 }
 
@@ -65,7 +65,7 @@ body {
   text-align: center;
 }
 
-/*aboutページ*/
+/*ここからaboutページ*/
 /*見出し*/
 .contents {
   padding: 400px 0;
@@ -73,7 +73,7 @@ body {
   background-image: url(/about/background_img1.png);
 }
 
-.contents h1 {
+.contents h2 {
   margin-bottom: 50px;
 }
 
@@ -124,7 +124,7 @@ body {
 
 .manager_introduction h2 {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .my_introduction_sentence {
@@ -149,5 +149,22 @@ body {
 }
 
 .my_introduction_sentence .my_image {
+  width: 40%;
   border-radius: 50%;
+}
+
+@media(max-width:1200px){
+  
+  .my_introduction_sentence {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .my_introduction_sentence table {
+    width: 100%;
+  }
+  
+  .my_introduction_sentence image {
+    width: 100%;
+  }
 }

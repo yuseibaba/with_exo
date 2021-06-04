@@ -10,8 +10,23 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require turbolinks
-//= require_tree .
 //= require jquery
 //= require jquery_ujs
+//= require_tree . 
+
+
+//readyイベントでhtmlの読み込みが完了後、jqueryによる操作を開始する。
+$(function() {
+  
+  /*モーダルページの表示と非表示
+  /*ハンバーガーメニューをクリック後、モーダルメニュー表示*/
+  $('.humberger-menu i').click( () => {
+    $('.nav-modal-wrapper').fadeIn();
+  });
+  
+  /*closeボタンをクリック後、モーダルメニューを非表示*/
+  $('#modal-close-btn i').click( () => {
+    $('.nav-modal-wrapper').fadeOut();
+  })
+});
+
