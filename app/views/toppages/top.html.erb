@@ -2,9 +2,9 @@
   
   <!--wrap-video上の見出しと新規登録ボタン-->
   <div class="text">
-    <a href="#" class="sign-up btn btn-light btn-lg active" role="button" aria-pressed="true">with exo に参加する</a>
+    <%= link_to 'with exo に参加する', signup_path, class: 'sign-up' %>
     <div class="about">
-      <a href="#">with exoとは?</a>
+     <%= link_to 'with exoとは', about_path, class: 'about-btn' %>
     </div>
   </div>
   
