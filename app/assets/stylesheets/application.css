@@ -18,7 +18,7 @@
   min-width: 720px;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #333333;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 200;
@@ -38,7 +38,7 @@
 
 /*header*/
  header {
-   z-index: 3;
+   z-index: 4;
    width: 100%;
    position: fixed;
    height: 100px;
@@ -49,10 +49,6 @@
 /*ヘッダーロゴのレイアウト*/
 .logo {
   width: 18%;
-}
-
-.logo a {
-  text-decoration: none;
 }
 
 .logo img {
@@ -68,7 +64,7 @@
   justify-content: space-between;
 }
 
-/*ログイン後に表示されるグローバルナビゲーション*/
+/*ログイン後に表示されるヘッダーメニュー*/
 .global-nav-top {
   display: flex;
   height: 100px;
@@ -151,17 +147,21 @@
   justify-content: space-between;
 }
 
-/*ログインしていない際に表示されるログインおよび新規登録ボタン*/
+/*ログイン前に表示されるログインおよび新規登録ボタン*/
 .login-btn {
   width: 20%;
+  text-align: right;
+  padding-right: 50px;
 }
 
-.btn {
+.header-btn {
+  display: inline-block;
   border-radius: 90px;
-  margin-right: 5px;
+  margin-right: 10px;
+  padding: 5px 10px;
 }
 
-/*ログイン後に表示されるグローバルナビゲーション*/
+/*ログイン後に表示されるヘッダーメニュー*/
 .global-navi-bottom {
   display: flex;
   height: 100px;
@@ -231,6 +231,20 @@
 .far span {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+/*フラッシュメッセージ*/
+.flash {
+  padding: 10px 0;
+  color: #000000;
+  background: rgba(242, 242, 242, .8);
+  text-align: center;
+  position: absolute;
+  top: 100px;
+  z-index: 3;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
   font-size: 14px;
 }
 
@@ -429,6 +443,7 @@ footer small {
   .login-btn {
     width: 54%;
   }
+  
 }
 
 
