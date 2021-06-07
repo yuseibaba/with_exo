@@ -20,12 +20,12 @@ $(function() {
   
   /*モーダルページの表示と非表示
   /*ハンバーガーメニューをクリック後、モーダルメニュー表示*/
-  $('.humberger-menu i').click( () => {
+  $('.humberger-menu i').on('click', () => {
     $('.nav-modal-wrapper').fadeIn();
   });
   
   /*closeボタンをクリック後、モーダルメニューを非表示*/
-  $('#modal-close-btn i').click( () => {
+  $('#modal-close-btn i').on('click', () => {
     $('.nav-modal-wrapper').fadeOut();
   })
 });
