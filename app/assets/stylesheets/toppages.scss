@@ -65,14 +65,23 @@ body {
   color: #e8e8e8;
 }
 
-.wrapper h1 {
+/*投稿一覧*/
+.all-post h1 {
   text-align: center;
 }
 
+.all-post .post-index {
+  min-height: 600px;
+}
+
 /*ここからaboutページ*/
+.wrapper {
+  width: 100%;
+}
 /*見出し*/
 .contents {
   padding: 400px 0;
+  width: 100%;
   text-align: center;
   background-image: url(/about/background_img1.png);
 }
@@ -122,7 +131,8 @@ body {
 
 /*自己紹介*/
 .manager_introduction {
-  padding: 400px 100px;
+  width: 100%;
+  padding: 400px 0;
   padding-bottom: 100px;
   background-image: url(/about/background_img3.png);
 }
@@ -134,7 +144,6 @@ body {
 
 .my_introduction_sentence {
   display: flex;
-  width: 100%;
 }
 
 .my_introduction_sentence table {
