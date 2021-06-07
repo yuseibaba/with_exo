@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: with_exo_production
   username: with_exo
   password: <%= ENV['WITH_EXO_DATABASE_PASSWORD'] %>

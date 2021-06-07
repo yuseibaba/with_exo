@@ -1,0 +1,161 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*新規登録ページ*/
+.signup  {
+  padding-top: 150px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.container {
+  height: auto;
+}
+
+.wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: left;
+  width: 50%;
+}
+
+.form .form-control {
+  height: 30px;
+}
+
+.signup-btn {
+  margin: 50px;
+  padding: 10px;
+}
+
+/*ユーザー詳細ページ*/
+.user-container {
+  padding-top: 100px;
+}
+
+/*ユーザートップ部分*/
+.user-container .user-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  margin: 0 auto;
+  background-color: #f0f8ff;
+  text-align: center;
+  
+}
+
+.user-top img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.user-top .user-name {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+.user-top .user-introduction {
+  display: inline-block;
+  width: 60%;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  text-align: left;
+  background-color:  #ffffff;
+}
+
+/*ユーザーボトム部分*/
+/*ユーザーが投稿した投稿一覧を表示*/
+.user-bottom {
+  text-align: center;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.user-bottom .nav-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-bottom .nav-tabs .nav-item {
+  display: inline-block;
+  width: 20%;
+  border-bottom: 1px solid #000000;
+}
+
+.user-bottom .nav-tabs .nav-item a {
+  display: block;
+  padding: 10px 0;
+}
+
+.user-bottom .nav-tabs .nav-item a:hover {
+  background-color: #f2f2f2;
+}
+/*現在表示しているタブ*/
+.active {
+  color: #00ffff;
+}
+
+/*ユーザー一覧ページ*/
+.user-index {
+  padding: 0;
+  padding-top: 200px;
+  margin-bottom: 50px;
+}
+
+.user-index .user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: solid 1px #f2f2f2;
+  background-color: #f0f8ff;
+}
+
+.user-index .user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.user-index .user .user-right {
+  margin-right: 20px;
+  width: 100%;
+}
+
+.user-index .user .user-right .user-name {
+  
+  height: 35px;
+  font-size: 17px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.user-index .user .user-right .user-introduce {
+  overflow: hidden;
+  height: 50px;
+  background-color: #ffffff;
+  padding: 5px 10px;
+}
+
+
+

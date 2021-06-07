@@ -1,0 +1,28 @@
+<div class="user-container">
+  <!--ユーザーの見出し-->
+  <div class="user-top">
+    
+    <!--プロフィール画像-->
+    <img src="/about/about2.png">
+    
+    <!-- ユーザーの名前-->
+    <div class="user-name">
+      <%= @user.name %>
+    </div>
+    
+    <!-- ユーザーの紹介文-->
+    <div class="user-introduction">
+      <%= @user.introduce_comment %>
+    </div>
+  </div><!--ここまでuser-top-->
+  
+  <!--ユーザーの投稿やフォローしたユーザー等に関すること-->
+  <div class="user-bottom">
+    <ul class="nav-tabs">
+      <li class="nav-item"><a href="#" class="nav-post active">投稿</a></li>
+      <li class="nav-item"><a href="#" class="nav-follow">フォロー</a></li>
+      <li class="nav-item"><a href="#" class="nav-follower">フォロワー</a></li>
+      <li class="nav-item"><a href="#" class="nav-like">お気に入り</a></li>
+    </ul>
+  </div>
+</div>
