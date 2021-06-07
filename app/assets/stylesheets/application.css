@@ -30,6 +30,7 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
  }
+ 
 
  a {
   text-decoration: none;
@@ -250,6 +251,7 @@
 
 /*footerメニュー*/
  footer {
+  width: 100%;
   text-align: center;
   background-color: #f0f0f0;
 }
@@ -445,5 +447,6 @@ footer small {
   }
   
 }
+
 
 
