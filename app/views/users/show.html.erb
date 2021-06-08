@@ -2,8 +2,14 @@
   <!--ユーザーの見出し-->
   <div class="user-top">
     
-    <!--プロフィール画像-->
+  <!--プロフィール画像-->
+  <% if @user.image? %> 
+    <p>
+      <%= image_tag @user.image.url %>
+    </p>
+  <% else %>
     <img src="/about/about2.png">
+  <% end %>
     
     <!-- ユーザーの名前-->
     <div class="user-name">
@@ -13,6 +19,10 @@
     <!-- ユーザーの紹介文-->
     <div class="user-introduction">
       <%= @user.introduce_comment %>
+    </div>
+    
+    <div class="edit-link">
+      <%= link_to 'プロフィールを編集する', edit_user_path(@user), class: 'edit-link-btn' %>
     </div>
   </div><!--ここまでuser-top-->
   
