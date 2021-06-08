@@ -22,7 +22,6 @@
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 200;
-  line-height: 2em;
   letter-spacing: .4em;
 }
 
@@ -30,7 +29,6 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
  }
- 
 
  a {
   text-decoration: none;
@@ -243,6 +241,7 @@
   text-align: center;
   position: absolute;
   top: 100px;
+  min-width: 720px;
   z-index: 3;
   width: 100%;
   border-radius: 0 0 2px 2px;

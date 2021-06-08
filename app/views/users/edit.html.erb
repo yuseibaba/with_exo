@@ -1,2 +1,33 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="edit">
+  <h2>ユーザー編集ページ</h2>
+</div>
+
+<!--編集フォーム-->
+<!--container,wrapperは新規登録と同じクラス-->
+<div class="container">
+  <div class="wrapper">
+    <%= form_with(model: @user, local: true) do |f| %>
+    
+     <!-- imgを加えることができる。-->
+     <div class="form">
+       <%= f.label :image, '画像' %>
+       <%= f.file_field :image, class: 'form-control image-form' %>
+     </div>
+    
+      <div class="form">
+        <%= f.label :name, '名前' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+      
+      <div class="form">
+        <%= f.label :introduce_comment, '自己紹介文' %>
+        <%= f.text_area :introduce_comment, class: 'introduce-form-control' %>
+      </div>
+      
+      <%= f.submit '更新する', class: 'edit-btn' %>
+    <% end %>
+
+  </div>
+</div>
+  
+    
