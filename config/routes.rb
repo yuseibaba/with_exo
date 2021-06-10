@@ -3,6 +3,9 @@ Rails.application.routes.draw do
      #Prefix Verb   URI Pattern               Controller#Action
      #root GET    /                         toppages#top
     #about GET    /about(.:format)          toppages#about
+    #login GET    /login(.:format)          sessions#new
+    #     POST   /login(.:format)          sessions#create
+  #logout DELETE /logout(.:format)         sessions#destroy
    #signup GET    /signup(.:format)         users#new
     #users GET    /users(.:format)          users#index
           #POST   /users(.:format)          users#create
@@ -14,6 +17,10 @@ Rails.application.routes.draw do
           
   root to: 'toppages#top'
   get 'about', to: 'toppages#about'
+  
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
   
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create, :edit, :update, :destroy]

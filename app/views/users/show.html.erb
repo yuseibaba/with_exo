@@ -24,14 +24,18 @@
     <% end %>
     
     <!--ユーザー情報編集ページへのリンクボタン-->
-    <div class="edit-link">
-      <%= link_to 'プロフィールを編集する', edit_user_path(@user), class: 'edit-link-btn' %>
-    </div>
+    <% if current_user == @user %>
+      <div class="edit-link">
+        <%= link_to 'プロフィールを編集する', edit_user_path(@user), class: 'edit-link-btn' %>
+      </div>
+    <% end %>
     
     <!--ユーザー退会ボタン-->
-    <div class="delete-link">
-      <%= link_to '退会する方はこちら', @user, method: :delete, data: { confirm: '本当に退会してよろしいでしょうか?' }, class: 'delete-link-btn' %>
-    </div>
+    <% if current_user == @user %>
+      <div class="delete-link">
+        <%= link_to '退会する方はこちら', @user, method: :delete, data: { confirm: '本当に退会してよろしいでしょうか?' }, class: 'delete-link-btn' %>
+      </div>
+    <% end %>
   </div><!--ここまでuser-top-->
   
   <!--ユーザーの投稿やフォローしたユーザー等に関すること-->

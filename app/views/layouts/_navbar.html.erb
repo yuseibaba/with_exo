@@ -8,66 +8,68 @@
      </h1>
    </div>
    
-  <!--ログインしていない場合-->
-  <!--
-  <div class="login-btn">
-    <button type="button" class="header-btn">ログイン</button>
-    <button type="button" class="header-btn">新規登録</button>
-  </div>-->
-   
-  <!--ログインしている場合のヘッダーメニュー-->
-  <div class="global-nav-top">
-    <ul>
-      <li><a href="#">マイページ</a></li>
-      <li><%= link_to 'ユーザー', users_path %></li>
-      <li><a href="#">投稿一覧</a></li>
-      <li><a href="#">ログアウト</a></li>
-    </ul>
-    
-    <!--投稿作成ボタン-->
-    <div class="top-post">
-      <a href="#">
-        <i class="far fa-edit fa-lg"><span>投稿</span></i>
-      </a>
-    </div>
-  </div>
-  
-  <!--1200px以下の際に表示するヘッダーメニュー-->
-  <div class="header-modal-wrapper">
-    
-    <!--ハンバーガーメニュー-->
-    <div class="humberger-menu">
-      <i class="fas fa-bars"></i>
-    </div>
-    
-    <!--投稿ボタン-->
-    <div class="top-post">
-      <a href="#">
-        <i class="far fa-edit fa-lg"><span>投稿</span></i>
-      </a>
-    </div>
-  </div>
-  
-  <!--gobal-navのモーダル-->
-  <div class="nav-modal-wrapper">
-    <div class="modal">
+   <!--ログインしている場合のヘッダーメニュー-->
+   <% if logged_in? %>
+    <div class="global-nav-top">
+      <ul>
+        <li><%= link_to 'マイページ', current_user %></li>
+        <li><%= link_to 'ユーザー', users_path %></li>
+        <li><a href="#">投稿一覧</a></li>
+        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+      </ul>
       
-      <!--モーダルcloseボタン-->
-      <div id="modal-close-btn">
-        <i class="fas fa-times fa-3x"></i>
+      <!--投稿作成ボタン-->
+      <div class="top-post">
+        <a href="#">
+          <i class="far fa-edit fa-lg"><span>投稿</span></i>
+        </a>
+      </div>
+    </div>
+    
+    <!--1200px以下の際に表示するヘッダーメニュー-->
+    <div class="header-modal-wrapper">
+      
+      <!--ハンバーガーメニュー-->
+      <div class="humberger-menu">
+        <i class="fas fa-bars"></i>
       </div>
       
-      <!--モーダルメニュー-->
-      <div id="global-nav-menu">
-        <ul>
-          <li><a href="#">my page</a></li>
-          <li><a href="#">users</a></li>
-          <li><a href="#">posts</a></li>
-          <li><a href="#">logout</a></li>
-        </ul>
+      <!--投稿ボタン-->
+      <div class="top-post">
+        <a href="#">
+          <i class="far fa-edit fa-lg"><span>投稿</span></i>
+        </a>
       </div>
-    </div><!--ここまでmodal-->
-  </div><!--ここまでnav-modal-wrapper-->
+    </div>
+    
+    <!--gobal-navのモーダル-->
+    <div class="nav-modal-wrapper">
+      <div class="modal">
+        
+        <!--モーダルcloseボタン-->
+        <div id="modal-close-btn">
+          <i class="fas fa-times fa-3x"></i>
+        </div>
+        
+        <!--モーダルメニュー-->
+        <div id="global-nav-menu">
+          <ul>
+            <li><%= link_to 'mypage', current_user %></li>
+            <li><%= link_to 'user', users_path %></li>
+            <li><a href="#">posts</a></li>
+            <li><%= link_to 'logout', logout_path, method: :delete %></li>
+          </ul>
+        </div>
+      </div><!--ここまでmodal-->
+    </div><!--ここまでnav-modal-wrapper-->
+    <% else %>
+    
+    <!--ログインしていない場合-->
+    <div class="header-login-btn">
+      <%= link_to 'ログイン', login_path, class: 'header-btn' %>
+      <%= link_to '新規登録', signup_path, class: 'header-btn' %>
+    </div>
+   <% end %>
  </nav>
    
 <!--wrap-videoの下のヘッダー-->
