@@ -127,7 +127,7 @@
   transition: all .2s ease;
 }
 
-/*1200px以下の際に表示するヘッダーメニューを非表示*/
+/*widthが1200px以下の時に表示するヘッダーメニューを非表示*/
 .header-modal-wrapper {
   display: none;
 }
@@ -147,7 +147,7 @@
 }
 
 /*ログイン前に表示されるログインおよび新規登録ボタン*/
-.login-btn {
+.header-login-btn {
   width: 20%;
   text-align: right;
   padding-right: 50px;
@@ -158,6 +158,7 @@
   border-radius: 90px;
   margin-right: 10px;
   padding: 5px 10px;
+  color: white;
 }
 
 /*ログイン後に表示されるヘッダーメニュー*/
@@ -322,8 +323,8 @@ footer small {
     width: 25%;
   }
   
-  .login-btn{
-    width: 28%;
+  .header-login-btn{
+    width: 35%;
   }
   
   /*ヘッダーメニューの変更*/
@@ -441,7 +442,7 @@ footer small {
     width: 40%;
   }
   
-  .login-btn {
+  .header-login-btn {
     width: 54%;
   }
   
