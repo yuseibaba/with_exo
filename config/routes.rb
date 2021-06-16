@@ -14,6 +14,11 @@ Rails.application.routes.draw do
           #PATCH  /users/:id(.:format)      users#update
           #PUT    /users/:id(.:format)      users#update
           #DELETE /users/:id(.:format)      users#destroy
+     #posts GET    /posts(.:format)          posts#index
+  #       POST   /posts(.:format)          posts#create
+#new_post GET    /posts/new(.:format)      posts#new
+  #  post GET    /posts/:id(.:format)      posts#show
+  #       DELETE /posts/:id(.:format)      posts#destroy
           
   root to: 'toppages#top'
   get 'about', to: 'toppages#about'
@@ -24,5 +29,6 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create, :edit, :update, :destroy]
+  resources :posts, only: [:index, :show, :new, :create, :destroy]
   
 end

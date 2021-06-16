@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="wrapper">
+    
+    <!--投稿詳細ページ-->
+    <div class="show-post">
+      <div class="show-post-top">
+        
+        <!--ユーザープロフィール画像-->
+        <% if @post.user.image? %> 
+          <p>
+            <%= image_tag user.image.url %>
+          </p>
+        <% else %>
+          <p>
+            <%= image_tag 'default.png' %>
+          </p>
+        <% end %>
+        
+        <!--ユーザー名-->
+        <div class="show-user-name">
+          <%= @post.user.name %>
+          <span>さん</span>
+        </div>
+        
+        <!--投稿した時-->
+        <div class="show-post-ocation">
+          <span>投稿時間：</span>
+          <%= l @post.created_at %>
+        </div>
+        
+      </div><!--ここまでshow-post-top-->
+      
+      <div class="show-post-bottom">
+        
+        <!--投稿画像-->
+        <div class="show-post-image">
+          <% if @post.post_image? %> 
+            <p>
+              <%= image_tag @post.post_image.thumb.url %>
+            </p>
+          <% else %>
+            <p>
+              <%= image_tag 'default.png' %>
+            </p>
+          <% end %>
+        </div>
+        
+        <!--ペットの種類-->
+        <div class="show-species">
+          <p>ペットの種類</p>
+          <div class="pet-species">
+            <%= @post.species %>
+          </div>
+        </div>
+        
+        <!--投稿内容-->
+        <div class="show-post-content">
+          <%= safe_join(@post.content.split("\n"), tag(:br)) %>
+        </div>
+        
+      </div><!--ここまでshow-post-bottom-->
+      
+    </div><!--show-post-->
+  </div><!--wrapper-->
+</div><!--container-->

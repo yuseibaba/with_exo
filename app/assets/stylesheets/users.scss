@@ -2,31 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*新規登録ページと編集ページの共通部分*/
-.container {
-  height: auto;
-}
-
-.container .wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-  min-height: 845px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  margin-top: 50px;
-  text-align: left;
-  width: 50%;
-}
-
-.form .form-control {
-  height: 30px;
-}
 
 /*新規登録ページ*/
 .signup  {
@@ -113,7 +88,6 @@
 }
 
 /*ユーザー退会ボタン*/
-
 .delete-link {
   position: absolute;
   bottom: 25px;
@@ -167,6 +141,19 @@
 }
 
 /*ユーザー一覧ページ*/
+.user-index-heading {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: solid 1px #000000;
+}
+
+.user-index-heading h2 {
+  display: inline-block;
+  text-align: left;
+  padding-top: 150px;
+}
+
 .user-index {
   padding: 0;
   padding-top: 200px;
