@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.order(id: :desc).page(params[:page]).per(9)
+    @posts = Post.order(id: :desc).page(params[:page]).per(12)
   end
 
   def show
@@ -24,6 +24,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    
+    flash[:notice] = '投稿を削除しました。'
+    redirect_to posts_url
   end
   
   private

@@ -448,7 +448,7 @@ footer small {
   
 }
 
-/*各フォームの共通部分*/
+/*共通部分*/
 .container {
   height: auto;
 }
@@ -472,6 +472,10 @@ footer small {
 
 .form .form-control {
   height: 30px;
+}
+
+.pagination {
+  text-align: center;
 }
 
 

@@ -4,12 +4,7 @@ class PostImageUploader < CarrierWave::Uploader::Base
    include CarrierWave::MiniMagick
    
   process resize_to_fill: [350, 350, "Center"]
-  
-  version :thumb do
-    process resize_to_fill: [500, 500, "center"]
-  end
    
-  
   # jpg,jpeg,gif,pngしか受け付けない
   def extension_white_list
     %w(jpg jpeg gif png)

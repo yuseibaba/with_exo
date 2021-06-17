@@ -9,4 +9,5 @@ class ApplicationController < ActionController::Base
       redirect_to rdirect_to login_url
     end
   end
+  
 end

@@ -103,6 +103,7 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 150px;
+  margin-bottom: 50px;
 }
 
 .show-post-top {
@@ -135,6 +136,7 @@
   margin: 0 auto;
 }
 
+/*投稿画像*/
 .show-post-image {
   width: 100%;
   height: auto;
@@ -147,19 +149,58 @@
   margin-top: 30px;
 }
 
-.show-species p {
+/*ペットの種類*/
+.show-species {
+  margin-top: 30px;
+  border: solid 1px #f2f2f2;
+  background-color: #f0f8ff;
   text-align: left;
+}
+
+.show-species p {
+  padding-left: 20px;
 }
 
 .show-species .pet-species {
-  padding: 10px 0;
-  background-color: #f0f8ff;
-  border: solid 1px #f2f2f2;
+  padding: 10px 20px;
+  background-color: #ffffff;
 }
 
+/*投稿内容*/
 .show-post-content {
-  background-color: #f0f8ff;
   border: solid 1px #f2f2f2;
+  background-color: #f0f8ff;
   text-align: left;
-  padding: 5px;
+}
+
+.show-post-content p {
+  padding-left: 20px;
+}
+
+.show-post-content .show-content {
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+/*コメントといいねの数と投稿削除ボタン*/
+.show-count-delete {
+  padding: 10px 20px;
+  border: solid 1px #f2f2f2;
+  background-color: #f0f8ff;
+  text-align: right;
+}
+
+.show-count {
+  text-align: left;
+}
+
+.show-delete {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 90px;
+  background-color: #ff6347;
+}
+
+.show-delete a {
+  color: #ffffff;
 }

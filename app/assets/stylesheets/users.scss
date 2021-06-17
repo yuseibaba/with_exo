@@ -81,7 +81,7 @@
 
 .edit-link .edit-link-btn {
   display: block;
-  padding: 10px 10px;
+  padding: 10px;
   background-color: #0070F8;
   color: #ffffff;
   border-radius: 90px;
@@ -137,7 +137,7 @@
 }
 /*現在表示しているタブ*/
 .active {
-  color: #00ffff;
+  color: #0000ff;
 }
 
 /*ユーザー一覧ページ*/
@@ -156,9 +156,7 @@
 
 .user-index {
   padding: 0;
-  padding-top: 200px;
-  margin: 0;
-  margin-bottom: 50px;
+  margin-top: 50px;
   min-height: 820px;
 }
 
@@ -200,6 +198,7 @@
   background-color: #ffffff;
   padding: 5px 10px;
 }
+
 
 
 

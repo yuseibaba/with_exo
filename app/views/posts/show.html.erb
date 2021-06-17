@@ -8,7 +8,7 @@
         <!--ユーザープロフィール画像-->
         <% if @post.user.image? %> 
           <p>
-            <%= image_tag user.image.url %>
+            <%= image_tag @post.user.image.url %>
           </p>
         <% else %>
           <p>
@@ -36,7 +36,7 @@
         <div class="show-post-image">
           <% if @post.post_image? %> 
             <p>
-              <%= image_tag @post.post_image.thumb.url %>
+              <%= image_tag @post.post_image.url %>
             </p>
           <% else %>
             <p>
@@ -55,7 +55,24 @@
         
         <!--投稿内容-->
         <div class="show-post-content">
-          <%= safe_join(@post.content.split("\n"), tag(:br)) %>
+          <p>投稿内容</p>
+          <div class="show-content">
+            <%= safe_join(@post.content.split("\n"), tag(:br)) %>
+          </div>
+        </div>
+        
+        <!--コメントといいねの数と投稿削除ボタン-->
+        <div class="show-count-delete">
+          <div class="show-count">
+            <p>コメント○　いいね○</p>
+          </div>
+          
+          <!--投稿削除ボタン-->
+          <% if current_user == @user %>
+            <div class="show-delete">
+              <%= link_to 'コメントを削除する', @post, method: :delete, data: { confirm: '本当に削除してよろしいでしょうか?' } %>
+            </div>
+          <% end %>
         </div>
         
       </div><!--ここまでshow-post-bottom-->
