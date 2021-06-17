@@ -8,7 +8,6 @@
   <div class="wrapper">
     <%= form_with(model: @user, local: true) do |f| %>
     
-     <!-- imgを加えることができる。-->
      <div class="form">
        <%= f.label :image, '画像' %>
        <%= f.file_field :image, class: 'form-control image-form' %>

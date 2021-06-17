@@ -448,5 +448,35 @@ footer small {
   
 }
 
+/*共通部分*/
+.container {
+  height: auto;
+}
+
+.container .wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  min-height: 845px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: left;
+  width: 50%;
+}
+
+.form .form-control {
+  height: 30px;
+}
+
+.pagination {
+  text-align: center;
+}
+
 
 

@@ -1,0 +1,75 @@
+<% if posts.any? %>
+ <div class="posts">
+   
+   <ul class="post-index">
+     <% posts.each do |post| %>
+      <li class="post">
+        
+        <!--投稿したユーザーの情報-->
+        <div class="post-user-info">
+          
+          <!--ユーザープロフィール画像-->
+          <%= link_to user_path(post.user) do %> 
+            <div class="post-user-image">
+              <% if post.user.image? %> 
+                <p>
+                  <%= image_tag post.user.image.url %>
+                </p>
+              <% else %>
+                <p>
+                  <%= image_tag 'default.png' %>
+                </p>
+              <% end %>
+            </div>
+          <% end %>
+          
+          <!--ユーザー名-->
+          <%= link_to user_path(post.user) do %> 
+            <div class="post-user-name">
+              <%= post.user.name %>
+            </div>
+          <% end %>
+        </div>
+        
+        <!--投稿内容-->
+        <%= link_to post_path(post.id) do %>
+          <div class="post-info">
+            
+            <!--投稿画像-->
+            <% if post.post_image? %> 
+              <p>
+                <%= image_tag post.post_image.url %>
+              </p>
+            <% else %>
+              <p>
+                <%= image_tag 'default.png' %>
+              </p>
+            <% end %>
+              
+            <!--投稿コメント-->
+            <div class="post-content">
+              <%= safe_join(post.content.split("\n"), tag(:br)) %>
+            </div>
+            
+            <div class="post-bottom">
+              
+              <div class="occasion">
+                <%= l post.created_at %>
+              </div>
+              
+              <!--コメント数、いいね数を表示-->
+              <div class="count">
+                <p>コメント○　いいね○</p>
+              </div>
+              
+            </div><!--ここまでがpost-bottom-->
+          </div><!--ここまでがpost-info-->
+        <% end %>
+        
+  
+      </li>
+     <% end %>
+   </ul>
+   <%= paginate posts %>
+  </div><!--ここまでがposts-->
+<% end %>

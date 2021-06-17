@@ -1,0 +1,30 @@
+<!--見出し-->
+<div class="new-post">
+  <h1>投稿作成</h1>
+</div>
+
+<!--投稿作成フォーム-->
+<div class="container">
+  <div class="wrapper">
+    
+    <%= form_with(model: @post, local: true) do |f| %>
+    
+      <div class="form">
+        <%= f.label :post_image, '画像' %>
+        <%= f.file_field :post_image, class: 'form-control image-form' %>
+      </div>
+     
+      <div class="form">
+        <%= f.label :species, 'ペットの種類' %>
+        <%= f.text_field :species, class: 'form-control' %>
+      </div>
+      
+      <div class="form">
+        <%= f.label :content, '本文(必須)' %>
+        <%= f.text_area :content, class: 'new-post-form-control' %>
+      </div>
+      
+      <%= f.submit '投稿する', class: 'post-btn' %>
+    <% end %>
+  </div><!--ここまでwrapper-->
+</div><!--ここまでcontainer-->

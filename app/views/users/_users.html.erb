@@ -1,29 +1,36 @@
-<% if users.any? %>
- <ul class="user-index">
-   <% users.each do |user| %>
-    <li class="user">
-      
-      <% if user.image? %> 
-        <p>
-          <%= image_tag user.image.url %>
-        </p>
-      <% else %>
-        <img src="/about/about2.png">
-      <% end %>
-      
-      <div class="user-right">
-        <div class="user-name">
-          <%= link_to user.name, user_path(user) %>
-        </div>
-        
-        <% if user.introduce_comment? %>
-          <div class="user-introduce">
-            <%= user.introduce_comment %>
-          </div>
-        <% end %>
-      </div><!--ここまでuser-right-->
-    </li>
-   <% end %>
- </ul>
- <%= paginate users %>
-<% end %>
+<container>
+  <wrapper>
+    <% if users.any? %>
+      <ul class="user-index">
+       <% users.each do |user| %>
+        <li class="user">
+          
+          <% if user.image? %> 
+            <p>
+              <%= image_tag user.image.url %>
+            </p>
+          <% else %>
+            <p>
+              <%= image_tag 'default.png' %>
+            </p>
+          <% end %>
+          
+          <div class="user-right">
+            <div class="user-name">
+              <%= link_to user.name, user_path(user) %>
+            </div>
+            
+            <% if user.introduce_comment? %>
+              <div class="user-introduce">
+                <%= user.introduce_comment %>
+              </div>
+            <% end %>
+          </div><!--ここまでuser-right-->
+        </li>
+       <% end %>
+      </ul>
+    <%= paginate users %>
+    <% end %>
+  </wrapper>
+</container>
+

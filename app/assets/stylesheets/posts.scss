@@ -1,0 +1,206 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*投稿一覧ページ*/
+.post-index-heading {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: solid 1px #000000;
+}
+
+.post-index-heading h2 {
+  display: inline-block;
+  text-align: left;
+  padding-top: 150px;
+}
+
+.posts {
+  width: 90%;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  min-height: 820px;
+}
+
+.posts .post-index {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.post-index .post {
+  width: 22.5%;
+  margin: 50px 10px;
+  background-color: #f0f8ff;
+  box-shadow: 4px 4px 8px #808080;
+}
+
+/*投稿したユーザーの情報*/
+.post-user-info {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/*ユーザーのプロフィール画像*/
+.post-user-info .post-user-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/*ユーザー名*/
+.post-user-info .post-user-name {
+  margin-left: 30px;
+}
+
+/*投稿内容*/
+.post-info {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.post-info img {
+  width: 100%;
+  height: auto;
+}
+
+/*投稿コメント*/
+.post-info .post-content {
+  padding: 15px 0;
+  border-bottom: dotted 1px #a9a9a9;
+  height: 8px;
+  overflow: scroll;
+}
+
+.post-info .post-bottom {
+  padding: 10px 0;
+}
+
+/*投稿作成ページ*/
+.new-post {
+  padding-top: 150px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.post-btn {
+  margin: 150px;
+  padding: 10px;
+}
+
+.new-post-form-control {
+  height: 80px;
+}
+
+/*投稿詳細ページ*/
+.show-post {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 150px;
+  margin-bottom: 50px;
+}
+
+.show-post-top {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: #f0f8ff;
+}
+
+.show-post-top img {
+  margin-left: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.show-user-name {
+  margin-left: 100px;
+  font-size: 17px;
+}
+
+.show-post-ocation {
+  margin-left: 100px;
+  font-size: 17px;
+}
+
+.show-post-bottom {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*投稿画像*/
+.show-post-image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.show-post-image p {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+
+/*ペットの種類*/
+.show-species {
+  margin-top: 30px;
+  border: solid 1px #f2f2f2;
+  background-color: #f0f8ff;
+  text-align: left;
+}
+
+.show-species p {
+  padding-left: 20px;
+}
+
+.show-species .pet-species {
+  padding: 10px 20px;
+  background-color: #ffffff;
+}
+
+/*投稿内容*/
+.show-post-content {
+  border: solid 1px #f2f2f2;
+  background-color: #f0f8ff;
+  text-align: left;
+}
+
+.show-post-content p {
+  padding-left: 20px;
+}
+
+.show-post-content .show-content {
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+/*コメントといいねの数と投稿削除ボタン*/
+.show-count-delete {
+  padding: 10px 20px;
+  border: solid 1px #f2f2f2;
+  background-color: #f0f8ff;
+  text-align: right;
+}
+
+.show-count {
+  text-align: left;
+}
+
+.show-delete {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 90px;
+  background-color: #ff6347;
+}
+
+.show-delete a {
+  color: #ffffff;
+}
