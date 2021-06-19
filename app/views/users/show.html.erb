@@ -1,51 +1,54 @@
-<div class="user-container">
+<div class="container">
+  <div class="wrapper">
+    
   <!--ユーザーの見出し-->
   <div class="user-top">
     
-  <!--プロフィール画像-->
-  <% if @user.image? %> 
-    <p>
-      <%= image_tag @user.image.url %>
-    </p>
-  <% else %>
-    <img src="/about/about2.png">
-  <% end %>
+    <!--プロフィール画像-->
+    <% if @user.image? %> 
+      <p>
+        <%= image_tag @user.image.url %>
+      </p>
+    <% else %>
+      <img src="/about/about2.png">
+    <% end %>
+      
+      <!-- ユーザーの名前-->
+      <div class="user-name">
+        <%= @user.name %>
+      </div>
+      
+      <!-- ユーザーの紹介文-->
+      <% if @user.introduce_comment? %>
+        <div class="user-introduction">
+          <%= @user.introduce_comment %>
+        </div>
+      <% end %>
+      
+      <!--ユーザー情報編集ページへのリンクボタン-->
+      <% if current_user == @user %>
+        <div class="edit-link">
+          <%= link_to 'プロフィールを編集する', edit_user_path(@user), class: 'edit-link-btn' %>
+        </div>
+      <% end %>
+      
+      <!--ユーザー退会ボタン-->
+      <% if current_user == @user %>
+        <div class="delete-link">
+          <%= link_to '退会する方はこちら', @user, method: :delete, data: { confirm: '本当に退会してよろしいでしょうか?' }, class: 'delete-link-btn' %>
+        </div>
+      <% end %>
+    </div><!--ここまでuser-top-->
     
-    <!-- ユーザーの名前-->
-    <div class="user-name">
-      <%= @user.name %>
+    <!--ユーザーの投稿やフォローしたユーザー等に関すること-->
+    <div class="user-bottom">
+      <ul class="nav-tabs">
+        <li class="nav-item"><a href="#" class="nav-post active">投稿</a></li>
+        <li class="nav-item"><a href="#" class="nav-follow">フォロー</a></li>
+        <li class="nav-item"><a href="#" class="nav-follower">フォロワー</a></li>
+        <li class="nav-item"><a href="#" class="nav-like">お気に入り</a></li>
+      </ul>
+      <%= render 'posts/posts', posts: @posts %>
     </div>
-    
-    <!-- ユーザーの紹介文-->
-    <% if @user.introduce_comment? %>
-      <div class="user-introduction">
-        <%= @user.introduce_comment %>
-      </div>
-    <% end %>
-    
-    <!--ユーザー情報編集ページへのリンクボタン-->
-    <% if current_user == @user %>
-      <div class="edit-link">
-        <%= link_to 'プロフィールを編集する', edit_user_path(@user), class: 'edit-link-btn' %>
-      </div>
-    <% end %>
-    
-    <!--ユーザー退会ボタン-->
-    <% if current_user == @user %>
-      <div class="delete-link">
-        <%= link_to '退会する方はこちら', @user, method: :delete, data: { confirm: '本当に退会してよろしいでしょうか?' }, class: 'delete-link-btn' %>
-      </div>
-    <% end %>
-  </div><!--ここまでuser-top-->
-  
-  <!--ユーザーの投稿やフォローしたユーザー等に関すること-->
-  <div class="user-bottom">
-    <ul class="nav-tabs">
-      <li class="nav-item"><a href="#" class="nav-post active">投稿</a></li>
-      <li class="nav-item"><a href="#" class="nav-follow">フォロー</a></li>
-      <li class="nav-item"><a href="#" class="nav-follower">フォロワー</a></li>
-      <li class="nav-item"><a href="#" class="nav-like">お気に入り</a></li>
-    </ul>
-    <%= render 'posts/posts', posts: @posts %>
   </div>
 </div>

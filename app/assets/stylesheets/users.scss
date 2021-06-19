@@ -30,19 +30,16 @@
 .introduce-form-control {
   height: 80px;
 }
-/*ユーザー詳細ページ*/
-.user-container {
-  padding-top: 100px;
-}
 
+/*ユーザー詳細ページ*/
 /*ユーザートップ部分*/
-.user-container .user-top {
+.user-top {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 138px;
   margin: 0 auto;
   background-color: #f0f8ff;
   text-align: center;
@@ -74,7 +71,7 @@
 /*ユーザー情報編集ページへのリンクボタン*/
 .user-top .edit-link {
   position: absolute;
-  top: 55px;
+  top: 138px;
   right: 20px;
   
 }
@@ -151,7 +148,9 @@
 .user-index-heading h2 {
   display: inline-block;
   text-align: left;
-  padding-top: 150px;
+  margin: 0;
+  padding-top: 133px;
+  padding-bottom: 10px;
 }
 
 .user-index {
