@@ -1,6 +1,4 @@
 <% if posts.any? %>
- <div class="posts">
-   
    <ul class="post-index">
      <% posts.each do |post| %>
       <li class="post">
@@ -59,17 +57,14 @@
               
               <!--コメント数、いいね数を表示-->
               <div class="count">
-                <p>コメント○　いいね○</p>
+                <p><i class="far fa-comment"></i>1 <i class="far fa-heart"></i>2</p>
               </div>
               
             </div><!--ここまでがpost-bottom-->
           </div><!--ここまでがpost-info-->
         <% end %>
-        
-  
       </li>
      <% end %>
    </ul>
-   <%= paginate posts %>
-  </div><!--ここまでがposts-->
+ 
 <% end %>
