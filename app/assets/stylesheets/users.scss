@@ -84,6 +84,13 @@
   border-radius: 90px;
 }
 
+/*ユーザーフォローボタン*/
+.user-top .follow-link {
+  position: absolute;
+  top: 138px;
+  right: 20px;
+}
+
 /*ユーザー退会ボタン*/
 .delete-link {
   position: absolute;
@@ -181,6 +188,7 @@
 .user-index .user .user-right {
   margin-right: 20px;
   width: 100%;
+  text-align: left;
 }
 
 .user-index .user .user-right .user-name {

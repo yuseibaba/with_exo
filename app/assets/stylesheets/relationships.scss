@@ -1,0 +1,19 @@
+// Place all the styles related to the relationships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.follow-btn {
+  display: block;
+  padding: 10px;
+  background-color: #0070F8;
+  color: #ffffff;
+  border-radius: 90px;
+}
+
+.unfollow-btn {
+  display: block;
+  padding: 10px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 90px;
+}
