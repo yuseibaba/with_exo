@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     #     POST   /login(.:format)          sessions#create
   #logout DELETE /logout(.:format)         sessions#destroy
    #signup GET    /signup(.:format)         users#new
+#followings_user GET    /users/:id/followings(.:format) users#followings
+#followers_user GET    /users/:id/followers(.:format)  users#followers
     #users GET    /users(.:format)          users#index
           #POST   /users(.:format)          users#create
 #edit_user GET    /users/:id/edit(.:format) users#edit
@@ -19,6 +21,8 @@ Rails.application.routes.draw do
 #new_post GET    /posts/new(.:format)      posts#new
   #  post GET    /posts/:id(.:format)      posts#show
   #       DELETE /posts/:id(.:format)      posts#destroy
+#relationships POST   /relationships(.:format)        relationships#create
+#relationship DELETE /relationships/:id(.:format)    relationships#destroy
           
   root to: 'toppages#top'
   get 'about', to: 'toppages#about'
@@ -28,7 +32,14 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   
   get 'signup', to: 'users#new'
-  resources :users, only: [:index, :show, :create, :edit, :update, :destroy]
+  resources :users, only: [:index, :show, :create, :edit, :update, :destroy] do
+    member do
+      get :followings
+      get :followers
+    end
+  end
+  
   resources :posts, only: [:index, :show, :new, :create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   
 end
