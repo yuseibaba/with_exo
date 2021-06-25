@@ -16,6 +16,7 @@ Rails.application.routes.draw do
           #PATCH  /users/:id(.:format)      users#update
           #PUT    /users/:id(.:format)      users#update
           #DELETE /users/:id(.:format)      users#destroy
+#likes_user GET    /users/:id/likes(.:format)      users#likes
      #posts GET    /posts(.:format)          posts#index
   #       POST   /posts(.:format)          posts#create
 #new_post GET    /posts/new(.:format)      posts#new
@@ -23,6 +24,8 @@ Rails.application.routes.draw do
   #       DELETE /posts/:id(.:format)      posts#destroy
 #relationships POST   /relationships(.:format)        relationships#create
 #relationship DELETE /relationships/:id(.:format)    relationships#destroy
+  #favorites POST   /favorites(.:format)            favorites#create
+  #favorite DELETE /favorites/:id(.:format)        favorites#destroy
           
   root to: 'toppages#top'
   get 'about', to: 'toppages#about'
@@ -36,10 +39,12 @@ Rails.application.routes.draw do
     member do
       get :followings
       get :followers
+      get :likes
     end
   end
   
   resources :posts, only: [:index, :show, :new, :create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :favorites, only: [:create, :destroy]
   
 end

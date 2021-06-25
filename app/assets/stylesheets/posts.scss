@@ -26,14 +26,15 @@
   padding: 0;
   margin: 0 auto;
   margin-bottom: 50px;
-  min-height: 820px;
 }
 
 .post-index .post {
-  width: 220px;
-  background-color: #f0f8ff;
+  width: 218px;
+  height: auto;
+  border: solid 1px #eeeeee;
   margin: 0 10px;
   margin-top: 50px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 }
 
 /*投稿したユーザーの情報*/
@@ -41,6 +42,7 @@
   display: flex;
   align-items: center;
   padding: 0 20px;
+  border-bottom: solid 1px #eeeeee;
 }
 
 /*ユーザーのプロフィール画像*/
@@ -110,8 +112,7 @@
   }
   
   .post-index .post {
-    width: 300px;
-    background-color: #f0f8ff;
+    width: 298px;
     margin: 0 10px;
     margin-top: 50px;
   }
@@ -211,6 +212,10 @@
 
 .show-count {
   text-align: left;
+}
+
+.fa-heart {
+  color: #F783AC;
 }
 
 .show-delete {

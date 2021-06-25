@@ -49,7 +49,7 @@
       <ul class="nav-tabs">
         <li class="nav-item"><a href="<%= user_path(@user) %>" class="nav-post <%= 'active' if current_page?(user_path(@user)) %>">投稿</a></li>
         <li class="nav-item"><a href="<%= followings_user_path(@user) %>" class="nav-follow <%= 'active' if current_page?(followings_user_path(@user)) %>">フォロー</a></li>
-        <li class="nav-item"><a href="<%= followers_user_path(@user) %>" class="nav-follower <%=  'active' if current_page?(followers_user_path(@user)) %>">フォロワー</a></li>
+        <li class="nav-item"><a href="<%= followers_user_path(@user) %>" class="nav-follower <%= 'active' if current_page?(followers_user_path(@user)) %>">フォロワー</a></li>
         <li class="nav-item"><a href="<%= likes_user_path(@user) %>" class="nav-like <%= 'active' if current_page?(likes_user_path(@user)) %>">お気に入り</a></li>
       </ul>
       <%= render 'posts/posts', posts: @posts %>
