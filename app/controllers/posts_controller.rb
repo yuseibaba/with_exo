@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :require_user_logged_in
+  
   def index
     @posts = Post.order(id: :desc).page(params[:page]).per(12)
   end
@@ -6,6 +8,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = @post.user
+    counts(@post)
   end
 
   def new
@@ -26,7 +29,6 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    
     flash[:notice] = '投稿を削除しました。'
     redirect_to posts_url
   end

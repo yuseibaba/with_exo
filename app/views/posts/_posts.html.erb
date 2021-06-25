@@ -2,6 +2,7 @@
    <ul class="post-index">
      <% posts.each do |post| %>
       <li class="post">
+        <% @like_count = post.liked.count %>
         
         <!--投稿したユーザーの情報-->
         <div class="post-user-info">
@@ -57,7 +58,7 @@
               
               <!--コメント数、いいね数を表示-->
               <div class="count">
-                <p><i class="far fa-comment"></i>1 <i class="far fa-heart"></i>2</p>
+                <p><i class="far fa-comment"></i>1 <i class="fas fa-heart"></i><%= @like_count %></p>
               </div>
               
             </div><!--ここまでがpost-bottom-->

@@ -30,6 +30,10 @@
         
       </div><!--ここまでshow-post-top-->
       
+      <div class="show-like-btn">
+        <%= render 'favorites/favorite_button', post: @post %>
+      </div>
+      
       <div class="show-post-bottom">
         
         <!--投稿画像-->
@@ -64,7 +68,7 @@
         <!--コメントといいねの数と投稿削除ボタン-->
         <div class="show-count-delete">
           <div class="show-count">
-            <p>コメント○　いいね○</p>
+            <p>コメント○　<i class="fas fa-heart"></i><%= @count_likes %></p>
           </div>
           
           <!--投稿削除ボタン-->

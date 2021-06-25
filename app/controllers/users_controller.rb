@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:index, :show, :edit, :update, :destroy]
+  before_action :require_user_logged_in, only: [:index, :show, :edit, :update, :destroy, :followings, :followers]
   
   def index
     @users = User.order(id: :desc).page(params[:page]).per(10)
@@ -46,7 +46,6 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    
     flash[:notice] = '退会しました。'
     redirect_to root_url
   end
@@ -59,6 +58,11 @@ class UsersController < ApplicationController
   def followers
     @user = User.find(params[:id])
     @followers = @user.followers.page(params[:page]).per(10)
+  end
+  
+  def likes
+    @user = User.find(params[:id])
+    @posts = @user.likes
   end
   
   private

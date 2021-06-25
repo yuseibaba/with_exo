@@ -6,13 +6,13 @@ class ApplicationController < ActionController::Base
   
   def require_user_logged_in
     unless logged_in?
-      redirect_to rdirect_to login_url
+      redirect_to login_url
+      flash[:notice] = 'ログインしてください。'
     end
   end
   
-  def couts(user)
-    @count_posts = user.pots.count
-    @count_follows = user.followings.count
-    @count_followers = user.followers.count
+  def counts(post)
+    @count_likes = post.liked.count
   end
+
 end

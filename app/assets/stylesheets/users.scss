@@ -192,11 +192,12 @@
 }
 
 .user-index .user .user-right .user-name {
-  
-  height: 35px;
+  height: 25px;
+  margin-bottom: 10px;
   font-size: 17px;
   font-weight: bold;
   align-items: center;
+  overflow: hidden;
 }
 
 .user-index .user .user-right .user-introduce {
