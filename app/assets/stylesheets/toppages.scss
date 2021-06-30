@@ -64,15 +64,14 @@ body {
 }
 
 /*投稿一覧*/
+.all-post {
+  min-height: 640px;
+}
 .all-post h1 {
   text-align: center;
   padding: 0;
   margin: 0;
   margin-top: 50px;
-}
-
-.all-post .post-index {
-  min-height: 600px;
 }
 
 /*ここからaboutページ*/

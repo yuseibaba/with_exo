@@ -30,7 +30,7 @@
 
 .post-index .post {
   width: 218px;
-  height: auto;
+  height: 425px;
   border: solid 1px #eeeeee;
   margin: 0 10px;
   margin-top: 50px;
@@ -96,6 +96,7 @@
 
 .new-post-form-control {
   height: 80px;
+  width: 100%;
 }
 
 /*投稿一覧のレスポンシブデザイン*/
@@ -113,6 +114,7 @@
   
   .post-index .post {
     width: 298px;
+    height: 500px;
     margin: 0 10px;
     margin-top: 50px;
   }

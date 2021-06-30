@@ -454,7 +454,7 @@ footer small {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  min-height: 845px;
+  min-height: 890px;
 }
 
 .form {
@@ -468,6 +468,7 @@ footer small {
 
 .form .form-control {
   height: 30px;
+  width: 100%;
 }
 
 .pagination {
