@@ -220,6 +220,7 @@
   color: #F783AC;
 }
 
+/*投稿削除ボタン*/
 .show-delete {
   display: inline-block;
   padding: 10px;
@@ -230,3 +231,126 @@
 .show-delete a {
   color: #ffffff;
 }
+
+/*コメント機能のレイアウト*/
+.comment {
+  margin-top: 30px;
+}
+
+/*コメントフォーム*/
+.comment-form {
+  display: flex;
+  border: solid 1px #f2f2f2;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: auto;
+  text-align: left;
+  width: 80%;
+  height: 234px;
+  background-color: #CCE7FF;
+}
+
+.comment-form label {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.comment-form-control {
+  margin: 0 30px;
+  width: 1438px;
+  height: 72px;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+.comment-form .comment-btn {
+    width: 100px;
+    display: inline-block;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 90px;
+    background-color: #0070F8;
+    color: #ffffff;
+}
+
+.comment-index {
+  width: 80%;
+  text-align: left;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.comment-post {
+  position: relative;
+  margin-top: 30px;
+}
+
+.comment-post img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.comment-top {
+  position: relative;
+  border: solid 1px #c0c0c0;
+  padding-bottom: 14px;
+}
+
+.comment-top .comment-top-user {
+  display: flex;
+  align-items: center;
+}
+
+.comment-top .comment-user-name {
+  padding-left: 20px;
+}
+
+.comment-top .comment-time {
+  padding-left: 20px;
+}
+
+.comment-top .comment-headding {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+.comment-content {
+  padding: 30px 20px;
+  border: solid 1px #c0c0c0;
+  border-top: transparent;
+  text-align: right;
+}
+
+.comment-content p {
+  text-align: left;
+  margin: 0;
+  word-wrap:break-word;
+}
+
+/*コメント削除ボタン*/
+.comment-delete {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 90px;
+  background-color: #ff6347;
+}
+
+.comment-delete a {
+  color: #ffffff;
+}
+
+
+
+
+
+
