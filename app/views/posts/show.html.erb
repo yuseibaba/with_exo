@@ -22,7 +22,7 @@
           <span>さん</span>
         </div>
         
-        <!--投稿した時-->
+        <!--投稿した時間-->
         <div class="show-post-ocation">
           <span>投稿時間：</span>
           <%= l @post.created_at %>
@@ -68,19 +68,85 @@
         <!--コメントといいねの数と投稿削除ボタン-->
         <div class="show-count-delete">
           <div class="show-count">
-            <p>コメント○　<i class="fas fa-heart"></i><%= @count_likes %></p>
+            <p><i class="far fa-comment"></i><%= @count_comments %> <i class="fas fa-heart"></i><%= @count_likes %></p>
           </div>
           
           <!--投稿削除ボタン-->
           <% if current_user == @user %>
-            <div class="show-delete">
-              <%= link_to 'コメントを削除する', @post, method: :delete, data: { confirm: '本当に削除してよろしいでしょうか?' } %>
+            <div class="show-delete btn">
+              <%= link_to '投稿を削除する', @post, method: :delete, data: { confirm: '本当に削除してよろしいでしょうか?' } %>
             </div>
           <% end %>
         </div>
         
       </div><!--ここまでshow-post-bottom-->
-      
+      <div class="comment">
+        <%= form_with(model: [@post, @comment], local: true) do |f| %>
+
+          <div class="comment-form">
+            <%= f.label :content, 'コメント' %>
+            <%= hidden_field_tag :post_id, @post.id %>
+            <%= f.text_area :content, class: 'comment-form-control' %>
+            <%= f.submit 'コメントする', class: 'comment-btn btn' %>
+          </div>
+
+        <% end %>
+        <% if @post.comments.any? %>
+          <ul class="comment-index">
+
+            <% @post.comments.each do |comment| %>
+              <li class="comment-post">
+
+                <div class="comment-top">
+
+                  <div class="comment-top-user">
+                    <!--コメントしたユーザーの画像-->
+                    <% if @post.user.image? %> 
+                      <p>
+                        <%= image_tag @post.user.image.url %>
+                      </p>
+                    <% else %>
+                      <p>
+                        <%= image_tag 'default.png' %>
+                      </p>
+                    <% end %>
+
+                    <!--コメントしたユーザーの名前-->
+                    <div class="comment-user-name">
+                      <%= comment.user.name %>
+                    </div>
+                  </div><!--ここまでがcomment-top-user-->
+
+                  <!--コメントした時間-->
+                  <div class="comment-time">
+                    <%= l comment.created_at %>
+                  </div>
+
+                  <p class="comment-headding">コメント</p>
+
+                </div><!--ここまでがcomment-top-->
+
+                <!--投稿内容-->
+                <div class="comment-content">
+                  <p>
+                    <%= safe_join(comment.content.split("\n"), tag(:br)) %>
+                  </p>
+                  <!--投稿削除ボタン-->
+                  <% if current_user == comment.user %>
+                    <div class="comment-delete btn">
+                      <%= link_to 'コメントを削除する', post_comment_path(@post, comment), method: :delete, data: { confirm: '本当に削除してよろしいでしょうか?' } %>
+                    </div>
+                  <% end %>
+                </div>
+                
+              </li>
+            <% end %>
+
+          </ul><!--ここまでcomment-index-->
+        <% end %>
+
+      </div>
+
     </div><!--show-post-->
   </div><!--wrapper-->
 </div><!--container-->

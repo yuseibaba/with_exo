@@ -9,15 +9,18 @@ class User < ApplicationRecord
   has_secure_password
   mount_uploader :image, ImageUploader
   
-  has_many :posts
+  has_many :posts, dependent: :destroy
   
-  has_many :relationships
+  has_many :relationships, dependent: :destroy
   has_many :followings, through: :relationships, source: :follow
   has_many :reverses_of_relationship, class_name: 'Relationship', foreign_key: 'follow_id'
   has_many :followers, through: :reverses_of_relationship, source: :user
   
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :likes, through: :favorites, source: :post
+
+  has_many :comments, dependent: :destroy
+  has_many :remarks, through: :comments, source: :post
   
   def follow(other_user)
     unless self == other_user
@@ -46,5 +49,5 @@ class User < ApplicationRecord
   def liking?(post)
     self.likes.include?(post)
   end
-  
+
 end

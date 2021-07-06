@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 #new_post GET    /posts/new(.:format)      posts#new
   #  post GET    /posts/:id(.:format)      posts#show
   #       DELETE /posts/:id(.:format)      posts#destroy
+#post_comments POST   /posts/:post_id/comments(.:format)     comments#create
+#post_comment DELETE /posts/:post_id/comments/:id(.:format) comments#destroy
 #relationships POST   /relationships(.:format)        relationships#create
 #relationship DELETE /relationships/:id(.:format)    relationships#destroy
   #favorites POST   /favorites(.:format)            favorites#create
@@ -44,6 +46,10 @@ Rails.application.routes.draw do
   end
   
   resources :posts, only: [:index, :show, :new, :create, :destroy]
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
+
   resources :relationships, only: [:create, :destroy]
   resources :favorites, only: [:create, :destroy]
   
