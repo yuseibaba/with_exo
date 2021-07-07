@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show, :edit, :update, :destroy, :followings, :followers]
   
   def index
-    @users = User.order(id: :desc).page(params[:page]).per(10)
+    if params[:search]
+      @users = User.where('name LIKE(?)', "%#{params[:search]}%").page(params[:page]).per(10)
+    else
+      @users = User.order(id: :desc).page(params[:page]).per(10)
+    end
   end
 
   def show

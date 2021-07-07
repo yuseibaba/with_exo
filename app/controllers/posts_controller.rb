@@ -3,7 +3,11 @@ class PostsController < ApplicationController
   before_action :correct_user, only: [:destroy]
   
   def index
-    @posts = Post.order(id: :desc).page(params[:page]).per(12)
+    if params[:search]
+      @posts = Post.where(['content LIKE(?) OR species LIKE(?)', "%#{params[:search]}%", "%#{params[:search]}%"])
+    else
+      @posts = Post.order(id: :desc).page(params[:page]).per(12)
+    end
   end
 
   def show
@@ -38,7 +42,7 @@ class PostsController < ApplicationController
   private
   
   def post_params
-    params.require(:post).permit(:content, :species, :post_image)
+    params.require(:post).permit(:content, :species, :post_image, :search)
   end
   
   def correct_user
@@ -47,4 +51,5 @@ class PostsController < ApplicationController
       redirect_to root_url
     end
   end
+
 end

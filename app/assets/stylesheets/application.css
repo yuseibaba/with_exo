@@ -475,5 +475,27 @@ footer small {
   text-align: center;
 }
 
+.resarch {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.resarch .resarch-form {
+  width: 30%;
+  background: #ffffff;
+  border: 1px solid #B3B3B3;
+  height: 33px;
+}
+
+.resarch .resarch-btn {
+  cursor: pointer;
+  border: none;
+  background: #3879D9;
+  color: #fff;
+  outline : none;
+  width: 3.0em;
+  height: 37px;
+}
 
 

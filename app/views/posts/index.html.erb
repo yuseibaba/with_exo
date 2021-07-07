@@ -1,8 +1,13 @@
-<!--検索機能をのちに実装-->
-
 <div  class="post-index-heading">
   <h2>投稿一覧</h2>
 </div>
+
+<%= form_with url: posts_path, method: :get, local: true, class: 'search-container' do |form| %>
+  <div class="resarch">
+    <%= form.text_field :search, class:'resarch-form' %>
+    <%= form.submit '検索', name: nil, class:'resarch-btn' %>
+  </div>
+<% end %>
 
 <!--投稿一覧を表示-->
 <%= render 'posts', posts: @posts %>
