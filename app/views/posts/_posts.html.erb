@@ -61,7 +61,7 @@
                   
                   <!--コメント数、いいね数を表示-->
                   <div class="count">
-                    <p><i class="far fa-comment"></i><%= @comment_count %> <i class="fas fa-heart"></i><%= @like_count %></p>
+                    <p><i class="far fa-comment"></i><%= post.comments.count %> <i class="fas fa-heart"></i><%= post.liked.count %></p>
                   </div>
                   
                 </div><!--ここまでがpost-bottom-->

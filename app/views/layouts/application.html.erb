@@ -18,23 +18,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <%= render 'layouts/navbar' %>
-    
     <div class="container">
       <!--フラッシュメッセージ-->
       <%= render 'layouts/flash_messages' %>
       <%= yield %>
     </div>
   </body>
-  <footer>
-    <div class="footer-navi">
-      <a href="#"><img src="/footer/footer-logo.png" alt="ロゴ画像"></a>
-      <ul>
-        <li><a href="#">利用規約</a></li>
-        <li><a href="#">プライバシーポリシー</a></li>
-        <li><a href="#">お問い合わせ</a></li>
-      </ul>
-    </div>
-    <small>&copy; 2021 with exo.</small>
-  </footer>
+
 </html>
