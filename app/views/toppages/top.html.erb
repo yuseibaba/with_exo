@@ -1,23 +1,36 @@
 <%= render 'layouts/navbar' %>
-<div class="wrap-video">
-  
-  <!--wrap-video上の見出しと新規登録ボタン-->
-  <div class="text">
-    <%= link_to 'with exo に参加する', signup_path, class: 'sign-up' %>
-    <div class="about">
-     <%= link_to 'with exoとは', about_path, class: 'about-btn' %>
+<!--<div class="wrap-video">-->
+
+    <!--wrap-video上の見出しと新規登録ボタン-->
+    <div class="text">
+      <%= link_to 'with exo に参加する', signup_path, class: 'sign-up' %>
+      <div class="about">
+      <%= link_to 'with exoとは', about_path, class: 'about-btn' %>
+      </div>
     </div>
-  </div>
-  
-  <!--video-->
-  <video src="/top/animal_movie.mp4" poster="/top/lizard.png" autoplay muted loop></video>
-  <img src="/top/lizard.png" alt="トカゲの画像">
-</div>
+    
+    <!--video-->
+    <ul id="slick">
+      <li><img alt="フクロモモンガの画像" src="top/slick01.jpg" /></li>
+      <li><img alt="ヤモリの画像" src="top/slick02.jpg" /></li>
+    </ul>
+    <!--<video src="/top/animal_movie.mp4" poster="/top/lizard.png" autoplay muted loop></video>-->
+    <!--<img src="/top/lizard.png" alt="トカゲの画像">-->
+
+
+<!--</div>-->
 
 <!--投稿一覧-->
 <div class="all-post">
-  <h1>最新の投稿</h1>
-  <%= render '/posts/posts', posts: @posts %> 
+
+  <% if logged_in? %>
+    <h1>みんなの投稿</h1>
+    <%= render '/posts/posts', posts: @feed_posts %>
+  <% else %>
+    <h1>最新の投稿</h1>
+    <%= render '/posts/posts', posts: @posts %> 
+  <% end %>
+
 </div>
 
 <%= render 'layouts/footer' %>

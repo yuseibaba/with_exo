@@ -24,10 +24,22 @@ body {
   display: none;
 }
 
+#slick {
+  margin: 0;
+  padding-top: 138px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #696969;
+}
+
+#slick li img {
+  margin: 0 auto;
+}
+
 /*video上にある新規登録ページとサイト紹介ページへのリンク*/
 .text {
   position: absolute;
-  top: 65%;
+  top: 60%;
   left: 0;
   right: 0;
   margin: auto;
