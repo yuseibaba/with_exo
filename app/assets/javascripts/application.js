@@ -28,5 +28,8 @@ $(function() {
   $('#modal-close-btn i').on('click', () => {
     $('.nav-modal-wrapper').fadeOut();
   })
+
+  $('#slick').slick();
+
 });
 

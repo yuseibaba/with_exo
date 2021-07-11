@@ -36,6 +36,10 @@ class User < ApplicationRecord
   def following?(other_user)
     self.followings.include?(other_user)
   end
+
+  def feed_posts
+    Post.where(user_id: following_ids + [self.id])
+  end
   
   def like(post)
     self.favorites.find_or_create_by(user_id: self.id, post_id: post.id)
