@@ -37,6 +37,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   get 'contact', to: 'contacts#contact'
+  get 'terms', to: 'terms#terms'
+  get 'policy', to: 'policies#policy'
   
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create, :edit, :update, :destroy] do
