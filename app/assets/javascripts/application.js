@@ -29,7 +29,33 @@ $(function() {
     $('.nav-modal-wrapper').fadeOut();
   })
 
-  $('#slick').slick();
+  $('#slick').slick({
+    autoplay: true,
+    speed: 900,
+    dots: true,
+    arrows: false,
+    centerMode: true,
+    centerPadding: '25%',
+    responsive: [{
+      breakpoint: 800,
+      settings: {
+        centerMode: false,
+      }
+    }]
+  });
 
 });
-
+/*
+responsive: [
+   {
+    breakpoint: 670, 
+    settings: {
+      autoplay: true,
+      speed: 900,
+      dots: true,
+      arrows: false,
+      centerMode: true,
+      centerPadding: '25%'
+    }
+   }
+ ]*/

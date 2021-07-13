@@ -7,39 +7,34 @@ body {
   margin: 0;
 }
 
-/*ヘッダー下のビデオ*/
+/*ヘッダー下のslick画像*/
 .wrap-video{
   position: relative;
   margin: 0 auto;
   align-items: center;
 }
 
-.wrap-video video{
-  position: relative;
-  width: 100%;
-  z-index: -100;
-}
-
-.wrap-video img {
-  display: none;
-}
-
 #slick {
   margin: 0;
+  padding: 0;
   padding-top: 138px;
-  padding-bottom: 50px;
+  padding-bottom: 280px;
   text-align: center;
-  background-color: #696969;
+  background-image: url(/top/background-img.png);
+  background-repeat: no-repeat;
 }
-
+ 
 #slick li img {
   margin: 0 auto;
+  height: 446px;
+  border: solid 10px #f0f0f0;
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-/*video上にある新規登録ページとサイト紹介ページへのリンク*/
+/*slick画像上にある新規登録ページとサイト紹介ページへのリンク*/
 .text {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 0;
   right: 0;
   margin: auto;
@@ -65,14 +60,14 @@ body {
   display: inline-block;
   position: relative;
   text-decoration: underline;
-  color: #ffffff;
+  color: #696969;
   margin-top: 10px;
   padding: 3px;
   transition: all .3s ease;
 }
 
 .text .about .about-btn:hover {
-  color: #e8e8e8;
+  color: #a9a9a9;
 }
 
 /*投稿一覧*/
@@ -84,6 +79,17 @@ body {
   padding: 0;
   margin: 0;
   margin-top: 50px;
+}
+
+@media(max-width:670px){
+  
+  #slick {
+    padding-bottom: 0;
+  }
+
+  .text .about .about-btn {
+    color: #ffffff;
+  }
 }
 
 /*ここからaboutページ*/
