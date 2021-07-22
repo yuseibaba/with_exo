@@ -34,14 +34,6 @@ $(function() {
     speed: 900,
     dots: true,
     arrows: false,
-    centerMode: true,
-    centerPadding: '25%',
-    responsive: [{
-      breakpoint: 800,
-      settings: {
-        centerMode: false,
-      }
-    }]
   });
 
 });

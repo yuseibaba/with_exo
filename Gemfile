@@ -63,6 +63,6 @@ gem 'jquery-rails'
 gem 'carrierwave', '~> 2.0'
 gem 'rmagick'
 
-group :production do
-  gem 'pg', '>= 0.18', '< 2.0'
-end
+#group :production do
+ # gem 'pg', '>= 0.18', '< 2.0'
+#end
