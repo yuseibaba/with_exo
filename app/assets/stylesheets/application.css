@@ -491,4 +491,13 @@ footer small {
   height: 37px;
 }
 
+.error-message ul {
+  padding: 0;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: left;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+}
+
 

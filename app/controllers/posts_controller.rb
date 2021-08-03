@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = @post.user 
     @comment = Comment.new 
+    @comments = @post.comments.order(id: :desc)
     counts(@post)
   end
 

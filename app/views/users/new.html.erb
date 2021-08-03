@@ -1,12 +1,24 @@
 <%= render 'layouts/navbar' %>
-<!--見出し-->
-<div class="signup">
-  <h1>新規登録</h1>
-</div>
 
 <!--新規登録フォーム-->
 <div class="container">
   <div class="wrapper">
+  
+    <div class= new-head>
+    <!--<% if @user.errors.any? %>
+        <div class="error-message">
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>-->
+
+      <div class="signup">
+        <h1>新規登録</h1>
+      </div>
+    </div>
     
     <%= form_with(model: @user, local: true) do |f| %>
      
