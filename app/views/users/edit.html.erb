@@ -1,12 +1,15 @@
 <%= render 'layouts/navbar' %>
-<div class="edit">
-  <h2>ユーザー編集ページ</h2>
-</div>
+
 
 <!--編集フォーム-->
 <!--container,wrapperは新規登録と同じクラス-->
 <div class="container">
   <div class="wrapper">
+    
+    <div class="edit">
+      <h2>ユーザー編集ページ</h2>
+    </div>
+    
     <%= form_with(model: @user, local: true) do |f| %>
     
      <div class="form">

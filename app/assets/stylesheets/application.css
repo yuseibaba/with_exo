@@ -247,6 +247,8 @@
   width: 100%;
   text-align: center;
   background-color: #f0f0f0;
+  position: absolute;/* ←絶対位置 */
+  bottom: 0;
 }
 
  footer .footer-navi {
@@ -438,6 +440,11 @@ footer small {
 /*共通部分*/
 .container {
   height: auto;
+  min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+  position: relative;/* ←相対位置 */
+  padding-bottom: -154px; /* ←フッターの高さを指定 */
+  box-sizing: border-box;
+
 }
 
 .container .wrapper {
@@ -445,7 +452,6 @@ footer small {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  min-height: 890px;
 }
 
 .form {
@@ -460,11 +466,25 @@ footer small {
 
 .form input {
   font-size: 16px;
+  border: 1px solid #696969; 
+}
+
+.form input #file-upload-button {
+  border: 1px solid #696969; 
+}
+
+.form textarea {
+  font-size: 16px;
+  border: 1px solid #696969; 
 }
 
 .form .form-control {
   height: 30px;
   width: 100%;
+}
+
+.form .image-form {
+  border: none;
 }
 
 .pagination {

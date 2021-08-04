@@ -1,12 +1,13 @@
 <%= render 'layouts/navbar' %>
-<!--見出し-->
-<div class="new-post">
-  <h1>投稿作成</h1>
-</div>
 
 <!--投稿作成フォーム-->
 <div class="container">
   <div class="wrapper">
+    
+    <!--見出し-->
+    <div class="new-post">
+      <h1>投稿作成</h1>
+    </div>
     
     <%= form_with(model: @post, local: true) do |f| %>
     

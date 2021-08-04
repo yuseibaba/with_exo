@@ -1,12 +1,14 @@
 <%= render 'layouts/navbar' %>
-<div class="login">
-  <h2>ログイン</h2>
-</div>
 
 <!--ログインフォーム-->
 <!--container,wrapperは新規登録、編集ページと同じクラス-->
 <div class="container">
   <div class="wrapper">
+
+    <div class="login">
+      <h2>ログイン</h2>
+    </div>
+    
     <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
     
       <div class="form">

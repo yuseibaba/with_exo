@@ -35,11 +35,12 @@
       
       <!--投稿ボタン-->
       <div class="top-post">
-        <a href="#">
+        <%= link_to new_post_path do %>
           <i class="far fa-edit fa-lg"><span>投稿</span></i>
-        </a>
+        <% end %>
       </div>
-    </div>
+
+    </div><!--ここまでがhumberger-menu-->
     
     <!--gobal-navのモーダル-->
     <div class="nav-modal-wrapper">
