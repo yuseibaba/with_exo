@@ -320,6 +320,25 @@ footer small {
   
   .header-login-btn{
     width: 35%;
+    padding-right: 10px;
+    border-radius: 4px;
+  }
+
+  .header-btn {
+    display: inline-block;
+    border-radius: 90px;
+    margin-right: 10px;
+    padding: 14px 20px;
+    padding-left: 25px;
+    background-color: #0000ff;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    transition: .3s;
+  }
+
+  .header-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
   }
   
   /*ヘッダーメニューの変更*/

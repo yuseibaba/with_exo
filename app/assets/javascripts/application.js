@@ -37,17 +37,3 @@ $(function() {
   });
 
 });
-/*
-responsive: [
-   {
-    breakpoint: 670, 
-    settings: {
-      autoplay: true,
-      speed: 900,
-      dots: true,
-      arrows: false,
-      centerMode: true,
-      centerPadding: '25%'
-    }
-   }
- ]*/
