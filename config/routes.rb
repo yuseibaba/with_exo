@@ -36,7 +36,6 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
-  get 'contact', to: 'contacts#contact'
   get 'terms', to: 'terms#terms'
   get 'policy', to: 'policies#policy'
   
