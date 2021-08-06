@@ -55,6 +55,7 @@
 /*ユーザー名*/
 .post-user-info .post-user-name {
   margin-left: 30px;
+  text-align: left;
   width: 100px;
   overflow: hidden;
 }
@@ -136,15 +137,19 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 150px;
-  margin-bottom: 250px;
+  margin-bottom: 50px;
 }
 
 .show-post-top {
   width: 80%;
   margin: 0 auto;
+  padding-bottom: 14px;
+  background-color: #f0f8ff;
+}
+
+.show-post-top-top {
   display: flex;
   align-items: center;
-  background-color: #f0f8ff;
 }
 
 .show-post-top img {
@@ -155,12 +160,15 @@
 }
 
 .show-user-name {
-  margin-left: 100px;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 10px;
   font-size: 17px;
 }
 
 .show-post-ocation {
-  margin-left: 100px;
+  text-align: left;
+  margin-left: 20px;
   font-size: 17px;
 }
 

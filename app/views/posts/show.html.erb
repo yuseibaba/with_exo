@@ -6,26 +6,28 @@
     <div class="show-post">
       <div class="show-post-top">
         
-        <!--ユーザープロフィール画像-->
-        <% if @post.user.image? %> 
-          <p>
-            <%= image_tag @post.user.image.url %>
-          </p>
-        <% else %>
-          <p>
-            <%= image_tag 'default.png' %>
-          </p>
-        <% end %>
-        
-        <!--ユーザー名-->
-        <div class="show-user-name">
-          <%= @post.user.name %>
-          <span>さん</span>
-        </div>
-        
+        <div class="show-post-top-top">
+
+          <!--ユーザープロフィール画像-->
+          <% if @post.user.image? %> 
+            <p>
+              <%= image_tag @post.user.image.url %>
+            </p>
+          <% else %>
+            <p>
+              <%= image_tag 'default.png' %>
+            </p>
+          <% end %>
+
+          <!--ユーザー名-->
+          <div class="show-user-name">
+            <%= @post.user.name %>
+          </div>
+
+        </div><!--ここまでがsho-post-top-top-->
+          
         <!--投稿した時間-->
         <div class="show-post-ocation">
-          <span>投稿時間：</span>
           <%= l @post.created_at %>
         </div>
         

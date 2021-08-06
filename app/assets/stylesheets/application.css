@@ -15,6 +15,9 @@
  */
 
  body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
   min-width: 720px;
   margin: 0;
   padding: 0;
@@ -33,6 +36,22 @@
  a {
   text-decoration: none;
   color: #333;
+}
+
+label {
+  font-size: 16px;
+}
+
+input {
+  font-size: 16px;
+}
+
+textarea {
+  font-size: 16px;
+}
+
+textarea {
+
 }
 
 /*header*/
@@ -140,18 +159,40 @@
 }
 
 /*ログイン前に表示されるログインおよび新規登録ボタン*/
-.header-login-btn {
-  width: 20%;
-  text-align: right;
-  padding-right: 50px;
+.header-login-btn{
+  width: 35%;
+  text-align: right; 
 }
 
 .header-btn {
   display: inline-block;
-  border-radius: 90px;
-  margin-right: 10px;
-  padding: 5px 10px;
-  color: white;
+  height: 22px;
+  padding: 33px 20px;
+  padding-left: 25px;
+  font-size: 14px;
+  color: #ffffff;
+  transition: .3s;
+}
+
+.sign-btn {
+  background-color: rgba(35,181,115,.8);
+  transition: .3s;
+}
+
+.sign-btn:hover {
+  background-color: rgba(255,255,255,.8);
+  color: #000000;
+}
+
+.log-btn {
+  border-right: 1px solid #ffffff;
+  background-color: rgba(66,133,244,.8);
+  transition: .3s;
+}
+
+.log-btn:hover {
+  background-color: rgba(255,255,255,.8);
+  color: #000000;
 }
 
 /*ログイン後に表示されるヘッダーメニュー*/
@@ -247,7 +288,6 @@
   width: 100%;
   text-align: center;
   background-color: #f0f0f0;
-  position: absolute;/* ←絶対位置 */
   bottom: 0;
 }
 
@@ -316,29 +356,6 @@ footer small {
   /*ヘッダーのロゴサイズ*/
   .logo {
     width: 25%;
-  }
-  
-  .header-login-btn{
-    width: 35%;
-    padding-right: 10px;
-    border-radius: 4px;
-  }
-
-  .header-btn {
-    display: inline-block;
-    border-radius: 90px;
-    margin-right: 10px;
-    padding: 14px 20px;
-    padding-left: 25px;
-    background-color: #0000ff;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    transition: .3s;
-  }
-
-  .header-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
   }
   
   /*ヘッダーメニューの変更*/
@@ -459,10 +476,9 @@ footer small {
 /*共通部分*/
 .container {
   height: auto;
-  min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
-  position: relative;/* ←相対位置 */
-  padding-bottom: -154px; /* ←フッターの高さを指定 */
   box-sizing: border-box;
+  flex: 1;
+
 
 }
 
@@ -480,11 +496,9 @@ footer small {
   margin-top: 50px;
   text-align: left;
   width: 50%;
-  font-size: 16px;
 }
 
 .form input {
-  font-size: 16px;
   border: 1px solid #696969; 
 }
 
@@ -493,7 +507,6 @@ footer small {
 }
 
 .form textarea {
-  font-size: 16px;
   border: 1px solid #696969; 
 }
 
