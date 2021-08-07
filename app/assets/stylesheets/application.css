@@ -15,10 +15,6 @@
  */
 
  body {
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -o-text-size-adjust: 100%;
   display: flex;
   flex-flow: column;
   min-height: 100vh;
@@ -496,6 +492,7 @@ footer small {
 
 .form input {
   border: 1px solid #696969; 
+  -webkit-appearance: none;
 }
 
 .form input #file-upload-button {
@@ -504,6 +501,7 @@ footer small {
 
 .form textarea {
   border: 1px solid #696969; 
+  -webkit-appearance: none;
 }
 
 .form .form-control {
@@ -533,6 +531,8 @@ footer small {
 }
 
 .resarch .resarch-btn {
+  margin: 0;
+  padding: 0;
   cursor: pointer;
   border: none;
   background: #3879D9;
@@ -540,6 +540,7 @@ footer small {
   outline : none;
   width: 3.0em;
   height: 37px;
+  -webkit-appearance: none;
 }
 
 .error-message ul {
