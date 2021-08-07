@@ -112,35 +112,6 @@
   color: #999999;
 }
 
-/*投稿一覧のレスポンシブデザイン*/
-@media(max-width:1200px){
-  .post-index {
-    width: 640px;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    min-height: 820px;
-  }
-  
-  .post-index .post {
-    width: 298px;
-    height: 566px;
-    margin: 0 10px;
-    margin-top: 50px;
-  }
-
-  .post-info .post-content {
-    padding: 20px 0;
-  }
-
-  .post-user-info .post-user-name{
-    width: 160px;
-  }
-}
-
 /*投稿詳細ページ*/
 .show-post {
   width: 100%;
@@ -293,13 +264,12 @@
 }
 
 .comment-form .comment-btn {
-    width: 100px;
-    display: inline-block;
-    margin: 30px auto;
-    padding: 10px;
-    border-radius: 90px;
-    background-color: #0070F8;
-    color: #ffffff;
+  display: inline-block;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 90px;
+  background-color: #0070F8;
+  color: #ffffff;
 }
 
 .comment-index {
@@ -377,5 +347,35 @@
 }
 
 
+/*レスポンシブデザイン*/
+@media(max-width:1200px){
+  .post-index {
+    width: 640px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    min-height: 820px;
+  }
+  
+  .post-index .post {
+    width: 298px;
+    height: 566px;
+    margin: 0 10px;
+    margin-top: 50px;
+  }
 
+  .post-info .post-content {
+    padding: 20px 0;
+  }
+
+  .post-user-info .post-user-name {
+    width: 160px;
+  }
+
+  .comment-form .comment-btn {
+  }
+}
 
