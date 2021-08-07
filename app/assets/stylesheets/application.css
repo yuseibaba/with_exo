@@ -348,7 +348,23 @@ footer small {
 
 /*header レスポンシブデザイン*/
 @media(max-width:1200px){
+
+  body {
+    font-size: 20px;
+  }
   
+  label {
+    font-size: 20px;
+  }
+  
+  input {
+    font-size: 20px;
+  }
+  
+  textarea {
+    font-size: 20px;
+  }
+
   /*ヘッダーのロゴサイズ*/
   .logo {
     width: 25%;
@@ -457,18 +473,6 @@ footer small {
   
 }
 
-@media(max-width:670px){
-  /*ヘッダーのロゴサイズ*/
-  .logo {
-    width: 40%;
-  }
-  
-  .header-login-btn {
-    width: 54%;
-  }
-  
-}
-
 /*共通部分*/
 .container .wrapper {
   display: flex;
@@ -499,7 +503,7 @@ footer small {
 }
 
 .form .form-control {
-  height: 30px;
+  height: 40px;
   width: 100%;
 }
 

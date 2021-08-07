@@ -4,7 +4,9 @@
     <!--wrap-video上の見出しと新規登録ボタン-->
     <div class="text">
       <% if logged_in? == false %>
-        <%= link_to 'with exo に参加する', signup_path, class: 'sign-up' %>
+        <div>
+          <%= link_to 'with exo に参加する', signup_path, class: 'sign-up' %>
+        </div>
       <% end %>
       <div class="about">
         <%= link_to 'with exoとは', about_path, class: 'about-btn' %>

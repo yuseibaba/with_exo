@@ -54,6 +54,7 @@
 
 /*ユーザー名*/
 .post-user-info .post-user-name {
+  white-space: nowrap;
   margin-left: 30px;
   text-align: left;
   width: 100px;
@@ -126,9 +127,17 @@
   
   .post-index .post {
     width: 298px;
-    height: 500px;
+    height: 566px;
     margin: 0 10px;
     margin-top: 50px;
+  }
+
+  .post-info .post-content {
+    padding: 20px 0;
+  }
+
+  .post-user-info .post-user-name{
+    width: 160px;
   }
 }
 
@@ -366,8 +375,6 @@
 .comment-delete a {
   color: #ffffff;
 }
-
-
 
 
 

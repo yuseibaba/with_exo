@@ -130,7 +130,7 @@
 /*自己紹介*/
 .manager_introduction {
   width: 100%;
-  margin-bottom: 260px;
+  margin-bottom: 50px;
 }
 
 .manager_introduction h2 {
@@ -167,6 +167,14 @@
 
 /*aboutページのレスポンシブデザイン*/
 @media(max-width:1200px){
+
+  .text .about .about-btn {
+    width:288.55px;
+    height: 23px;
+    padding: 14px 20px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+  }
   
   .my_introduction_sentence {
     display: flex;
@@ -187,5 +195,9 @@
 
   .introduction {
     margin: 100px 0;
+  }
+
+  footer small {
+    font-size: 14px;
   }
 }
