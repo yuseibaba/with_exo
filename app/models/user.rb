@@ -4,7 +4,6 @@ class User < ApplicationRecord
   validates :email, length: { maximum: 255 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false } 
-  validates :password_digest, length: { minimum: 6 }
   validates :introduce_comment, length: { maximum: 255 }
   
   has_secure_password

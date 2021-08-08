@@ -5,11 +5,23 @@
   <div class="wrapper">
   
     <div class= new-head>
+   
+      <!--バリデーションエラーメッセージ-->
+      <% if @user.errors.any? %>
+        <div class="error-message">
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
       <div class="signup">
         <h1>新規登録</h1>
       </div>
-    </div>
+
+    </div><!--ここまでnew-head-->
     
     <%= form_with(model: @user, local: true) do |f| %>
      

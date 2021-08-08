@@ -4,9 +4,21 @@
 <div class="container">
   <div class="wrapper">
     
-    <!--見出し-->
-    <div class="new-post">
-      <h1>投稿作成</h1>
+    <div class="new-head">
+      <!--バリデーションエラーメッセージ-->
+      <% if @post.errors.any? %>
+        <div class="error-message">
+          <ul>
+            <% @post.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <!--見出し-->
+      <div class="new-post">
+        <h1>投稿作成</h1>
+      </div>
     </div>
     
     <%= form_with(model: @post, local: true) do |f| %>

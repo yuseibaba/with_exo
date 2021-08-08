@@ -552,6 +552,7 @@ footer small {
   text-align: left;
   border: 1px solid #ff0000;
   color: #ff0000;
+  list-style: none;
 }
 
 
