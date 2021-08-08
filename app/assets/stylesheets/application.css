@@ -524,10 +524,12 @@ footer small {
 }
 
 .resarch .resarch-form {
+  padding: 0;
   width: 30%;
   background: #ffffff;
   border: 1px solid #B3B3B3;
   height: 33px;
+  -webkit-appearance: none;
 }
 
 .resarch .resarch-btn {
@@ -539,7 +541,7 @@ footer small {
   color: #fff;
   outline : none;
   width: 3.0em;
-  height: 37px;
+  height: 35px;
   -webkit-appearance: none;
 }
 
