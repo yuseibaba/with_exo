@@ -5,7 +5,7 @@
     <div class="text">
       <% if logged_in? == false %>
         <div>
-          <%= link_to 'with exo に参加する', signup_path, class: 'sign-up' %>
+          <%= link_to 'ゲストとしてログインする', guest_login_path, method: :post, class: 'sign-up' %>
         </div>
       <% end %>
       <div class="about">

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     #about GET    /about(.:format)          toppages#about
     #login GET    /login(.:format)          sessions#new
     #     POST   /login(.:format)          sessions#create
+#guest_login POST   /guest_login(.:format)                 sessions#guest_login
   #logout DELETE /logout(.:format)         sessions#destroy
    #signup GET    /signup(.:format)         users#new
 #followings_user GET    /users/:id/followings(.:format) users#followings
@@ -34,6 +35,7 @@ Rails.application.routes.draw do
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
+  post 'guest_login', to: 'sessions#guest_login'
   delete 'logout', to: 'sessions#destroy'
 
   get 'terms', to: 'terms#terms'
