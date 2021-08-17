@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   describe '正常系の機能' do
     context 'ユーザーを作成する' do
       it '正しく作成できること' do
@@ -13,13 +12,13 @@ RSpec.describe User, type: :model do
           introduce_comment: 'はじめまして。田中 太郎と申します。'
         )
 
-      expect(user).to be_valid
-      user.save
+        expect(user).to be_valid
+        user.save
 
-      created_user = User.find(1)
-      expect(created_user.name).to eq('田中 太郎')
-      expect(created_user.email).to eq('taro.tanaka@example.jp')
-      expect(created_user.introduce_comment).to eq('はじめまして。田中 太郎と申します。')
+        created_user = User.find(1)
+        expect(created_user.name).to eq('田中 太郎')
+        expect(created_user.email).to eq('taro.tanaka@example.jp')
+        expect(created_user.introduce_comment).to eq('はじめまして。田中 太郎と申します。')
       end
     end
   end
@@ -42,8 +41,6 @@ RSpec.describe User, type: :model do
         new_user = User.new
         expect(new_user.save).to be_falsey
       end
-
     end
   end
-
 end

@@ -1,0 +1,105 @@
+inherit_from: .rubocop_todo.yml
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/BlockLength:
+  Max: 55
+
+Metrics/MethodLength:
+  Max: 15
+
+# Missing magic comment # frozen_string_literal: true. を無視
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Missing top-level class documentation comment. を無視
+Style/Documentation:
+  Enabled: false
+
+# Line is too long を無視
+Metrics/LineLength:
+  Enabled: false
+
+# Use nested module/class definitions instead of compact style. を無視
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  Exclude:
+    - 'app/controllers/posts_controller.rb'
+    - 'app/controllers/users_controller.rb'
+
+Style/ExpandPathArguments:
+  Exclude:
+    - 'bin/rails'
+    - 'bin/rake'
+
+Style/GlobalStdStream:
+  Exclude:
+    - 'config/environments/production.rb'
+
+Style/GuardClause:
+  Exclude:
+    - 'app/controllers/application_controller.rb'
+    - 'app/controllers/comments_controller.rb'
+    - 'app/controllers/posts_controller.rb'
+    - 'app/controllers/sessions_controller.rb'
+    - 'app/controllers/toppages_controller.rb'
+    - 'app/models/user.rb'
+
+Style/IfUnlessModifier:
+  Exclude:
+    - 'app/controllers/comments_controller.rb'
+    - 'app/controllers/posts_controller.rb'
+    - 'app/controllers/toppages_controller.rb'
+    - 'app/models/user.rb'
+
+Style/MixinUsage:
+  Exclude:
+    - 'bin/setup'
+    - 'bin/update'
+
+Style/NumericLiterals:
+  Exclude:
+    - 'db/schema.rb'
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'app/uploaders/image_uploader.rb'
+    - 'app/uploaders/post_image_uploader.rb'
+
+Style/RedundantBegin:
+  Exclude:
+    - 'bin/yarn'
+
+Style/RedundantFetchBlock:
+  Exclude:
+    - 'config/puma.rb'
+
+Style/RedundantSelf:
+  Exclude:
+    - 'app/models/user.rb'
+
+Style/SafeNavigation:
+  Exclude:
+    - 'app/controllers/sessions_controller.rb'
+    - 'app/models/user.rb'
+
+Style/StderrPuts:
+  Exclude:
+    - 'bin/yarn'
+
+Style/StringConcatenation:
+  Exclude:
+    - 'app/uploaders/image_uploader.rb'
+    - 'app/uploaders/post_image_uploader.rb'
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/WordArray:
+  EnforcedStyle: percent
+  MinSize: 3

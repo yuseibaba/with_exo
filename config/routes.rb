@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
      #Prefix Verb   URI Pattern               Controller#Action
      #root GET    /                         toppages#top
@@ -30,9 +32,10 @@ Rails.application.routes.draw do
   #favorites POST   /favorites(.:format)            favorites#create
   #favorite DELETE /favorites/:id(.:format)        favorites#destroy
           
+>>>>>>> f96b81c0a622e7601c9732e7d9eb01095127a4d8
   root to: 'toppages#top'
   get 'about', to: 'toppages#about'
-  
+
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   post 'guest_login', to: 'sessions#guest_login'
@@ -40,7 +43,7 @@ Rails.application.routes.draw do
 
   get 'terms', to: 'terms#terms'
   get 'policy', to: 'policies#policy'
-  
+
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create, :edit, :update, :destroy] do
     member do
@@ -49,7 +52,7 @@ Rails.application.routes.draw do
       get :likes
     end
   end
-  
+
   resources :posts, only: [:index, :show, :new, :create, :destroy]
   resources :posts do
     resources :comments, only: [:create, :destroy]
@@ -57,5 +60,4 @@ Rails.application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
   resources :favorites, only: [:create, :destroy]
-  
 end

@@ -1,4 +1,3 @@
 class PoliciesController < ApplicationController
-  def policy
-  end
+  def policy; end
 end

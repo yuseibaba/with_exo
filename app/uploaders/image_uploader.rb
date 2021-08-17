@@ -1,16 +1,13 @@
 class ImageUploader < CarrierWave::Uploader::Base
-  # Include RMagick or MiniMagick support:
-   include CarrierWave::RMagick
-   include CarrierWave::MiniMagick
-
+  include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
   process resize_to_fill: [200, 200, "Center"]
- 
-  # jpg,jpeg,gif,pngしか受け付けない
+
+  # only pg,jpeg,gif,png
   def extension_white_list
     %w(jpg jpeg gif png)
   end
 
- # ファイル名の変更
   def filename
     time = Time.now
     name = time.strftime('%Y%m%d%H%M%S') + '.jpg'

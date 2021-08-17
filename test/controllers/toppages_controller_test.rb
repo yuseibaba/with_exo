@@ -5,5 +5,4 @@ class ToppagesControllerTest < ActionDispatch::IntegrationTest
     get toppages_top_url
     assert_response :success
   end
-
 end
