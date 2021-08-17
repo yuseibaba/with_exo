@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :require_user_logged_in
   before_action :correct_user, only: [:destroy]
-  
+
   def index
     if params[:search]
       @posts = Post.where(['content LIKE(?) OR species LIKE(?)', "%#{params[:search]}%", "%#{params[:search]}%"])
@@ -12,8 +12,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @user = @post.user 
-    @comment = Comment.new 
+    @user = @post.user
+    @comment = Comment.new
     @comments = @post.comments.order(id: :desc)
     counts(@post)
   end
@@ -39,18 +39,17 @@ class PostsController < ApplicationController
     flash[:notice] = '投稿を削除しました。'
     redirect_to posts_url
   end
-  
+
   private
-  
+
   def post_params
     params.require(:post).permit(:content, :species, :post_image, :search)
   end
-  
+
   def correct_user
     @post = current_user.posts.find_by(id: params[:id])
     unless @post
       redirect_to root_url
     end
   end
-
 end

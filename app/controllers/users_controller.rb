@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show, :edit, :update, :destroy, :followings, :followers]
-  
+
   def index
     if params[:search]
       @users = User.where('name LIKE(?)', "%#{params[:search]}%").page(params[:page]).per(10)
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    
+
     if @user.update(user_params)
       flash[:notice] = '編集が完了しました。'
       redirect_to @user
@@ -44,7 +44,6 @@ class UsersController < ApplicationController
       flash.now[:notice] = '編集に失敗しました。'
       render :edit
     end
-    
   end
 
   def destroy
@@ -53,27 +52,25 @@ class UsersController < ApplicationController
     flash[:notice] = '退会しました。'
     redirect_to root_url
   end
-  
+
   def followings
     @user = User.find(params[:id])
     @followings = @user.followings.page(params[:page]).per(10)
   end
-  
+
   def followers
     @user = User.find(params[:id])
     @followers = @user.followers.page(params[:page]).per(10)
   end
-  
+
   def likes
     @user = User.find(params[:id])
     @posts = @user.likes
   end
-  
+
   private
-  
+
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduce_comment, :image)
   end
-
 end
-

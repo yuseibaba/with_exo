@@ -1,4 +1,3 @@
 class TermsController < ApplicationController
-  def terms
-  end
+  def terms; end
 end
