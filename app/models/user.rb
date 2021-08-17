@@ -53,4 +53,18 @@ class User < ApplicationRecord
   def liking?(post)
     self.likes.include?(post)
   end
+<<<<<<< HEAD
 end
+=======
+
+  def self.guest
+    find_or_create_by!(name: 'ゲスト') do |user|
+      user.assign_attributes({
+        email: 'guest@example.jp',
+      })
+      user.password_digest = SecureRandom.urlsafe_base64
+    end
+  end
+
+end
+>>>>>>> f96b81c0a622e7601c9732e7d9eb01095127a4d8
