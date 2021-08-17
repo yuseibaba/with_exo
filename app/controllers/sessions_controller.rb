@@ -25,9 +25,9 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: email)
     if @user && @user.authenticate(password)
       session[:user_id] = @user.id
-      return true
+      true
     else
-      return false
+      false
     end
   end
 end
