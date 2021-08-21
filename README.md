@@ -1,6 +1,6 @@
 # with_exo
 
-URL: http://54.250.70.41/
+URL: https://www.with-exo.com/
 
 エキゾチックアニマルについて自由に投稿できるSNSです。
 
