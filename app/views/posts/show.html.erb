@@ -104,9 +104,9 @@
 
                   <div class="comment-top-user">
                     <!--コメントしたユーザーの画像-->
-                    <% if @post.user.image? %> 
+                    <% if comment.user.image? %> 
                       <p>
-                        <%= image_tag @post.user.image.url %>
+                        <%= image_tag comment.user.image.url %>
                       </p>
                     <% else %>
                       <p>

@@ -2,6 +2,9 @@ ja:
   time:
    formats:
     default: '%Y/%m/%d %H:%M'
+  errors:
+    messages:
+      mini_magick_processing_error: "を処理できませんでした。画像を確認してください。"
 
   activerecord:
     attributes:

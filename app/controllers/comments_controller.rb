@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
       redirect_to @post
     else
       @post = Post.find(params[:post_id])
+      @comments = @post.comments.order(id: :desc)
       counts(@post)
       flash[:notice] = 'コメントに失敗しました。'
       render template: "posts/show"
