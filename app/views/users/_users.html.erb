@@ -28,8 +28,11 @@
           </div><!--ここまでuser-right-->
         </li>
        <% end %>
+
+       <!--ページネーション-->
+       <%= paginate users %>
+
       </ul>
-    <%= paginate users %>
     <% end %>
   </wrapper>
 </container>
