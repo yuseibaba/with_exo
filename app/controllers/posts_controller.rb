@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     if params[:search]
       @posts = Post.where(['content LIKE(?) OR species LIKE(?)', "%#{params[:search]}%", "%#{params[:search]}%"])
     else
-      @posts = Post.order(id: :desc).page(params[:page]).per(12)
+      @posts = Post.order(id: :desc).page(params[:page]).per(8)
     end
   end
 

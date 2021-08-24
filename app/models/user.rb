@@ -55,9 +55,10 @@ class User < ApplicationRecord
   end
 
   def self.guest
-    find_or_create_by!(name: 'ゲスト') do |user|
+    find_or_create_by!(email: 'guest@example.jp') do |user|
       user.assign_attributes({
-        email: 'guest@example.jp',
+        name: 'ゲスト',
+        introduce_comment: 'ゲストユーザーです。'
       })
       user.password_digest = SecureRandom.urlsafe_base64
     end

@@ -31,13 +31,17 @@
   <% if logged_in? %>
     <h1>仲間の投稿</h1>
     <%= render '/posts/posts', posts: @feed_posts %>
+    <div class="pagination">
+      <%= paginate @feed_posts %>
+    </div>
   <% else %>
     <h1>最新の投稿</h1>
     <%= render '/posts/posts', posts: @posts %> 
+    <div class="pagination">
+      <%= paginate @posts %>
+    </div>
   <% end %>
 
 </div>
 
 <%= render 'layouts/footer' %>
-
-

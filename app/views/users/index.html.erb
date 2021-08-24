@@ -12,4 +12,12 @@
 
 <!--user一覧を表示-->
 <%= render 'users', users: @users %>
+
+  <!--ページネーション-->
+  <div class="pagination-margin">
+    <div class="pagination">
+      <%= paginate @users %>
+    </div>
+  </div>
+
 <%= render 'layouts/footer' %>

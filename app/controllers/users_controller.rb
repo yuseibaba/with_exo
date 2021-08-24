@@ -5,13 +5,13 @@ class UsersController < ApplicationController
     if params[:search]
       @users = User.where('name LIKE(?)', "%#{params[:search]}%").page(params[:page]).per(10)
     else
-      @users = User.order(id: :desc).page(params[:page]).per(10)
+      @users = User.order(id: :desc).page(params[:page]).per(8)
     end
   end
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts.order(id: :desc).page(params[:page]).per(12)
+    @posts = @user.posts.order(id: :desc).page(params[:page]).per(8)
   end
 
   def new
@@ -55,17 +55,17 @@ class UsersController < ApplicationController
 
   def followings
     @user = User.find(params[:id])
-    @followings = @user.followings.page(params[:page]).per(10)
+    @followings = @user.followings.page(params[:page]).per(8)
   end
 
   def followers
     @user = User.find(params[:id])
-    @followers = @user.followers.page(params[:page]).per(10)
+    @followers = @user.followers.page(params[:page]).per(8)
   end
 
   def likes
     @user = User.find(params[:id])
-    @posts = @user.likes
+    @posts = @user.likes.page(params[:page]).per(8)
   end
 
   private

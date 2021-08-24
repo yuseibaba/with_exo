@@ -54,7 +54,14 @@
         <li class="nav-item"><a href="<%= likes_user_path(@user) %>" class="nav-like <%= 'active' if current_page?(likes_user_path(@user)) %>">お気に入り</a></li>
       </ul>
       <%= render 'posts/posts', posts: @posts %>
-    </div>
+
+      <!--ページネーション-->
+      <div class="pagination">
+        <%= paginate @posts %>
+      </div>
+
+    </div><!--ここまでがuser-bottom-->
   </div>
 </div>
+
 <%= render 'layouts/footer' %>
