@@ -58,7 +58,9 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+gem 'dotenv-rails'
 gem 'carrierwave', '~> 2.0'
+gem 'fog-aws'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'rails-i18n'
