@@ -156,7 +156,6 @@ textarea {
 
 /*ログイン前に表示されるログインおよび新規登録ボタン*/
 .header-login-btn{
-  width: 35%;
   text-align: right; 
 }
 
@@ -470,7 +469,7 @@ footer small {
     width: 100%;
     z-index: -100;
   }
-  
+
 }
 
 /*共通部分*/
