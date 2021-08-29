@@ -11,14 +11,23 @@ class PostImageUploader < CarrierWave::Uploader::Base
 
   # exchange file's name
   def filename
-    time = Time.now
-    name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
-    name.downcase
+    if original_filename.present?
+      time = Time.now
+      name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
+      name.downcase
+    end
   end
 
   # Choose what kind of storage to use for this uploader:
   # storage :file
-   storage :fog
+  # storage :fog
+  if Rails.env.development?
+    storage :file
+  elsif Rails.env.test?
+    storage :file
+  else
+    storage :fog
+  end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
