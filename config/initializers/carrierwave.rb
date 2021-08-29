@@ -2,6 +2,7 @@ require 'carrierwave/storage/abstract'
 require 'carrierwave/storage/file'
 require 'carrierwave/storage/fog'
 
+unless Rails.env.development? || Rails.env.test?
   CarrierWave.configure do |config|
     config.storage = :fog
     config.fog_provider = 'fog/aws'
@@ -14,3 +15,4 @@ require 'carrierwave/storage/fog'
     config.fog_directory = 'with-exo-s3'
     config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/with-exo-s3'
   end
+end
