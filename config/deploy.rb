@@ -38,7 +38,7 @@
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-lock '3.4.0'
+lock '3.16.0'
 
 set :application, 'with_exo'
 
